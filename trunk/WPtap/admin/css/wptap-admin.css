@@ -1,0 +1,59 @@
+#wptap-tab ul {
+	height:40px;
+	border-bottom:1px #3c576c solid;
+	padding-left:5px;
+}
+
+#wptap-tab li {
+	float:left;
+	font-weight:bold;
+	color:#27537A;
+	height:30px;
+	text-align:center;
+	padding:10px 10px 0 10px;
+	background: url(tab.png) no-repeat top left;
+	cursor:pointer;
+}
+
+#wptap-tab li.current {
+	background: url(tab.png) no-repeat 0 -50px;
+}
+
+.wptap-setting-content {
+	display:none;
+}
+
+#wptap-setting-global {
+	display:block;
+}
+
+#wptap-tab li.last {
+	padding:10px 0 0 0;
+	background-position:right -100px;
+	width:2px;
+}
+
+/*#wptap-tab li.last
+{
+	padding:0 10px 0 0;	
+	background: url(tab.png) no-repeat 100% -100px;
+	height:40px;
+
+}
+
+#wptap-tab li.last a{
+	float:left;
+	padding:0 0 0 10px;
+	height:40px;
+	background:url(tab.png) no-repeat 0 0;
+	line-height:40px;
+
+}
+
+#wptap-tab .last.current{
+	background-position:100% -150px;
+}
+
+#waptap-tab li.last.current a{
+	background-position:0 -50px;
+}*/
