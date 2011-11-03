@@ -11,7 +11,7 @@
  Author: WPtap Development Team
  Author URI: http://www.iphonemofo.net/
 */
-ff
+
 define('WPTAP_PLUGIN_NAME', 'WPtap');
 if(!defined('WPTAP_PLUGIN_PATH')) {
 	define('WPTAP_PLUGIN_PATH', dirname(__FILE__) . DIRECTORY_SEPARATOR);
