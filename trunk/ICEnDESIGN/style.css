@@ -120,10 +120,8 @@ body {
 .posts {
 	position:relative;
 	padding:20px 0 7px 30px;
-	z-index:2;
-	background-color:#d7d7d7;
-	background:url('images/bg_posts.png') 0 0 repeat;
-	zoom:1;
+	background:#e9e9e9;
+	background:url('images/bg_posts.png') transparent scroll repeat 0 0;
 }
 
 .post-item {
