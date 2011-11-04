@@ -11,8 +11,13 @@
 	
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 	<!--[if IE 6]>
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style-ie6.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style-ie6.css" type="text/css" media="screen" />
 	<![endif]-->
+
+	<script type='text/javascript' src='<?php bloginfo('wpurl') ?>/wp-includes/js/jquery/jquery.js'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url') ?>/javascript/jquery.easing.1.3.js'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url') ?>/javascript/jquery.vgrid.0.1.4-mod.js'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url') ?>/javascript/init.js'></script>
 	
 	<!-- pingback url -->
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />

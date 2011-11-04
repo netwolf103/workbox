@@ -2,11 +2,11 @@
 
 	<div id="content">
 
-		<div class="posts">
+		<div class="posts grid">
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-			<div id="post-<?php the_ID(); ?>" class="post-item">
+			<div id="post-<?php the_ID(); ?>" class="post-item grid-item">
 				<h2><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 
 				<div class="post-thumbnail">
