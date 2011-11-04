@@ -1,0 +1,230 @@
+<!--{include manage_header}-->
+<script>   
+function setChange(){   
+  if (document.f.smsgateway.value ==  "1"){                           
+  	document.all.tb1.style.display   =   "block";   
+  	document.all.tb2.style.display   =   "block";                
+  }else{                           
+  	document.all.tb1.style.display   =   "none";
+  	document.all.tb2.style.display   =   "none";                      
+  }  
+  
+  if (document.f.smsgateway.value ==  "2"){                           
+  	document.all.tb3.style.display   =   "block";   
+  	document.all.tb4.style.display   =   "block";                
+  }else{                           
+  	document.all.tb3.style.display   =   "none";
+  	document.all.tb4.style.display   =   "none";                      
+  } 
+}   
+</script>   
+
+<div id="bdw" class="bdw">
+<div id="bd" class="cf">
+<div id="partner">
+	<div class="dashboard" id="dashboard">
+		<ul>${mcurrent_system('sms')}</ul>
+	</div>
+	<div id="content" class="clear mainwide">
+        <div class="clear box">
+            <div class="box-top"></div>
+            <div class="box-content">
+                 <div class="head"><h2>短信配置（请填写<!--{if ($INI['sms']['gateway']=='1')}--><a href="http://notice.zuitu.com/" target="_blank">最土增值服务平台</a><!--{elseif ($INI['sms']['gateway']=='2')}--><a href="http://www.smsbao.com/reg?r=17003" target="_blank">短信宝服务平台</a><!--{else}--><a href="http://www.smsbao.com/reg?r=17003" target="_blank">短信宝服务平台</a><!--{/if}-->的用户名和密码）</h2></div>
+                <div class="sect">
+                    <form method="post" name="f">
+						<div class="wholetip clear"><h3>1、基本信息</h3></div>
+
+						<div class="field">
+                            <label>短信通道接口</label>
+							<select name="sms[gateway]" onchange="setChange()" id="smsgateway">
+								<!--{if ($INI['sms']['gateway']=='1')}-->
+								短信宝服务平台<option value="2">短信宝服务平台</option>
+								最土增值服务平台<option value="1" selected="true">最土增值服务平台</option>
+								<!--{elseif ($INI['sms']['gateway']=='2')}-->
+								短信宝服务平台<option value="2" selected="true">短信宝服务平台</option>
+								最土增值服务平台<option value="1">最土增值服务平台</option>
+								<!--{else}-->
+								短信宝服务平台<option value="2" selected="true">短信宝服务平台</option>
+								最土增值服务平台<option value="1">最土增值服务平台</option>
+								<!--{/if}-->
+							</select>
+							&nbsp;&nbsp;选择用于发送短信的通道接口(<a href="http://www.smsbao.com/reg?r=17003" target="_blank"><font color="red">还没账号？点击这免费注册</font></a>)
+                        </div>
+
+                        <div class="field" id="tb1" <!--{if ($INI['sms']['gateway']=='2')}-->style='DISPLAY:none'<!--{elseif ($INI['sms']['gateway']=='1')}--><!--{else}-->style='DISPLAY:none'<!--{/if}-->>
+                            <label>最土短信用户</label>
+                            <input type="text" size="30" name="sms[user]" class="f-input" value="{$INI['sms']['user']}"/>
+                        </div>
+                        <div class="field" id="tb2" <!--{if ($INI['sms']['gateway']=='2')}-->style='DISPLAY:none'<!--{elseif ($INI['sms']['gateway']=='1')}--><!--{else}-->style='DISPLAY:none'<!--{/if}-->>
+                            <label>最土短信密码</label>
+                            <input type="password" size="30" name="sms[pass]" class="f-input" value="{$INI['sms']['pass']}"/>
+                        </div>
+
+												<div class="field" id="tb3" <!--{if ($INI['sms']['gateway']=='1')}-->style='DISPLAY:none'<!--{/if}-->>
+                            <label>短信宝帐号</label>
+                            <input type="text" size="30" name="sms[smsbao_user]" class="f-input" value="{$INI['sms']['smsbao_user']}"/>
+                        </div>
+                        <div class="field" id="tb4" <!--{if ($INI['sms']['gateway']=='1')}-->style='DISPLAY:none'<!--{/if}-->>
+                            <label>短信宝密码</label>
+                            <input type="password" size="30" name="sms[smsbao_pass]" class="f-input" value="{$INI['sms']['smsbao_pass']}"/>
+                        </div>
+
+                        <div class="field">
+                            <label>点发频率</label>
+                            <input type="text" size="30" name="sms[interval]" class="number" value="${abs(intval($INI['sms']['interval']))}"/>
+                            <span class="inputtip">用户连续点击短信发送的，时间间隔限制，管理员点发不受此限制，建议：60-300s</span>
+                        </div>
+
+						 <div class="field">
+                            <label>{$INI['system']['couponname']}次数</label>
+                            <input type="text" size="30" name="sms[limit]" class="number" value="${abs(intval($INI['sms']['limit']))}"/>
+                            <span class="inputtip">用户连续点击短信发送的，最大发送次数限制，管理员点发不受此限制，建议：1-5次</span>
+                        </div>
+
+						<div class="wholetip clear"><h3>2、功能开关</h3></div>
+						<div class="field">
+                            <label>手机短信注册</label>
+							<!--{if ($INI['sms']['reg']=='0')}-->
+                            开启<input type="radio" name="sms[reg]" value="1" />
+							关闭<input type="radio" name="sms[reg]" checked="checked" value="0"/>
+							<!--{elseif ($INI['sms']['reg']=='1')}-->
+							开启<input type="radio" name="sms[reg]" checked="checked" value="1"  />
+							关闭<input type="radio" name="sms[reg]" value="0"/>
+							<!--{else}-->
+							开启<input type="radio" name="sms[reg]" value="1" />
+							关闭<input type="radio" name="sms[reg]" checked="checked" value="0"/>
+							<!--{/if}-->
+							&nbsp;&nbsp;开启后前台<a href="/account/signup.php" target="_blank"><font color="red"><b>用户注册</b></font></a>页面必须通过短信验证手机号才能完成注册
+                        </div>
+						<div class="field">
+                            <label>短信找回密码</label>
+                            <!--{if ($INI['sms']['getpwd']=='0')}-->
+                            开启<input type="radio" name="sms[getpwd]" value="1" />
+							关闭<input type="radio" name="sms[getpwd]" checked="checked" value="0"/>
+							<!--{elseif ($INI['sms']['getpwd']=='1')}-->
+							开启<input type="radio" name="sms[getpwd]" checked="checked" value="1"  />
+							关闭<input type="radio" name="sms[getpwd]" value="0"/>
+							<!--{else}-->
+							开启<input type="radio" name="sms[getpwd]" value="1" />
+							关闭<input type="radio" name="sms[getpwd]" checked="checked" value="0"/>
+							<!--{/if}-->
+							&nbsp;&nbsp;开启后前台<a href="/account/repass.php" target="_blank"><font color="red"><b>忘记密码</b></font></a>页面可以通过输入手机号短信找回密码
+                        </div>
+						<div class="field">
+                            <label>手机号登录</label>
+                            <!--{if ($INI['sms']['login']=='0')}-->
+                            开启<input type="radio" name="sms[login]" value="1" />
+							关闭<input type="radio" name="sms[login]" checked="checked" value="0"/>
+							<!--{elseif ($INI['sms']['login']=='1')}-->
+							开启<input type="radio" name="sms[login]" checked="checked" value="1"  />
+							关闭<input type="radio" name="sms[login]" value="0"/>
+							<!--{else}-->
+							开启<input type="radio" name="sms[login]" value="1" />
+							关闭<input type="radio" name="sms[login]" checked="checked" value="0"/>
+							<!--{/if}-->
+							&nbsp;&nbsp;开启后前台<a href="/account/login.php" target="_blank"><font color="red"><b>用户登录</b></font></a>页面可以通过手机号和密码登录网站
+                        </div>
+						<div class="field">
+                            <label>绑定手机号</label>
+                            <!--{if ($INI['sms']['bind']=='0')}-->
+                            开启<input type="radio" name="sms[bind]" value="1" />
+							关闭<input type="radio" name="sms[bind]" checked="checked" value="0"/>
+							<!--{elseif ($INI['sms']['bind']=='1')}-->
+							开启<input type="radio" name="sms[bind]" checked="checked" value="1"  />
+							关闭<input type="radio" name="sms[bind]" value="0"/>
+							<!--{else}-->
+							开启<input type="radio" name="sms[bind]" value="1" />
+							关闭<input type="radio" name="sms[bind]" checked="checked" value="0"/>
+							<!--{/if}-->
+							&nbsp;&nbsp;开启后前台用户登录网站到<a href="/account/settings.php" target="_blank"><font color="red"><b>账户设置</b></font></a>页面可以（重新）绑定手机号
+                        </div>
+						<div class="field">
+                            <label>强制绑定手机</label>
+                            <!--{if ($INI['sms']['cons']=='0')}-->
+                            开启<input type="radio" name="sms[cons]" value="1" />
+							关闭<input type="radio" name="sms[cons]" checked="checked" value="0"/>
+							<!--{elseif ($INI['sms']['cons']=='1')}-->
+							开启<input type="radio" name="sms[cons]" checked="checked" value="1"  />
+							关闭<input type="radio" name="sms[cons]" value="0"/>
+							<!--{else}-->
+							开启<input type="radio" name="sms[cons]" value="1" />
+							关闭<input type="radio" name="sms[cons]" checked="checked" value="0"/>
+							<!--{/if}-->
+							&nbsp;&nbsp;开启后前台用户要<a href="/team/buy.php?id=1" target="_blank"><font color="red"><b>参加团购</b></font></a>必须先绑定手机号否则提示用户绑定
+                        </div>
+						<div class="field">
+                            <label>购买成功提示</label>
+                            <!--{if ($INI['sms']['buy']=='0')}-->
+                            开启<input type="radio" name="sms[buy]" value="1" />
+							关闭<input type="radio" name="sms[buy]" checked="checked" value="0"/>
+							<!--{elseif ($INI['sms']['buy']=='1')}-->
+							开启<input type="radio" name="sms[buy]" checked="checked" value="1"  />
+							关闭<input type="radio" name="sms[buy]" value="0"/>
+							<!--{else}-->
+							开启<input type="radio" name="sms[buy]" value="1" />
+							关闭<input type="radio" name="sms[buy]" checked="checked" value="0"/>
+							<!--{/if}-->
+							&nbsp;&nbsp;开启后前台用户购买<a href="/team/buy.php?id=1" target="_blank"><font color="red"><b>团购项目</b></font></a>成功后会收到一条购买成功提示短信
+                        </div>
+						<div class="field">
+                            <label>指定号码接收</label>
+                            <!--{if ($INI['sms']['assign']=='0')}-->
+                            开启<input type="radio" name="sms[assign]" value="1" />
+							关闭<input type="radio" name="sms[assign]" checked="checked" value="0"/>
+							<!--{elseif ($INI['sms']['assign']=='1')}-->
+							开启<input type="radio" name="sms[assign]" checked="checked" value="1"  />
+							关闭<input type="radio" name="sms[assign]" value="0"/>
+							<!--{else}-->
+							开启<input type="radio" name="sms[assign]" value="1" />
+							关闭<input type="radio" name="sms[assign]" checked="checked" value="0"/>
+							<!--{/if}-->
+							&nbsp;&nbsp;开启后前台用户在<a href="/coupon/index.php" target="_blank"><font color="red"><b>我的{$INI['system']['couponname']}</b></font></a>中可以指定号码接收短信{$INI['system']['couponname']}。
+                        </div>
+						<div class="field">
+                            <label>{$INI['system']['couponname']}获取</label>
+                            <!--{if ($INI['sms']['coupon']=='0')}-->
+                            开启<input type="radio" name="sms[coupon]" value="1" />
+							关闭<input type="radio" name="sms[coupon]" checked="checked" value="0"/>
+							<!--{elseif ($INI['sms']['coupon']=='1')}-->
+							开启<input type="radio" name="sms[coupon]" checked="checked" value="1"  />
+							关闭<input type="radio" name="sms[coupon]" value="0"/>
+							<!--{else}-->
+							开启<input type="radio" name="sms[coupon]" value="1" />
+							关闭<input type="radio" name="sms[coupon]" checked="checked" value="0"/>
+							<!--{/if}-->
+							&nbsp;&nbsp;关闭后前台用户在<a href="/coupon/index.php" target="_blank"><font color="red"><b>我的{$INI['system']['couponname']}</b></font></a>中不能自己操作获取{$INI['system']['couponname']}。
+                        </div>
+						<div class="field">
+                            <label>自动发{$INI['system']['couponname']}</label>
+                            <!--{if ($INI['sms']['auto']=='0')}-->
+                            开启<input type="radio" name="sms[auto]" value="1" />
+							关闭<input type="radio" name="sms[auto]" checked="checked" value="0"/>
+							<!--{elseif ($INI['sms']['auto']=='1')}-->
+							开启<input type="radio" name="sms[auto]" checked="checked" value="1"  />
+							关闭<input type="radio" name="sms[auto]" value="0"/>
+							<!--{else}-->
+							开启<input type="radio" name="sms[auto]" value="1" />
+							关闭<input type="radio" name="sms[auto]" checked="checked" value="0"/>
+							<!--{/if}-->
+							&nbsp;&nbsp;关闭后团购项目成功后系统不自动发送{$INI['system']['couponname']}短信给所有参加团购的用户，需要用户手动获取{$INI['system']['couponname']}。
+                        </div>
+						
+
+                        <div class="act">
+                            <input type="submit" value="保存" name="commit" class="formbutton"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="box-bottom"></div>
+        </div>
+	</div>
+
+<div id="sidebar">
+</div>
+
+</div>
+</div> <!-- bd end -->
+</div> <!-- bdw end -->
+
+<!--{include manage_footer}-->
