@@ -2,23 +2,20 @@
 
 	<div id="content">
 
-		<div class="posts grid">
+		<div id="grid-wrapper">
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-			<div id="post-<?php the_ID(); ?>" class="post-item grid-item">
-				<h2><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+			<div id="post-<?php the_ID(); ?>" class="grid-item">
 
-				<div class="post-thumbnail">
-					<a class="thumbnail-frame" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail(); ?></a>
+				<div class="grid-image">
+					<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('home1'); ?></a>
 				</div>
 			</div>
 
 		<?php endwhile; else: ?>
 
 		<?php endif; ?>
-		
-		<div class="clear"></div>
 
 		</div>
 
