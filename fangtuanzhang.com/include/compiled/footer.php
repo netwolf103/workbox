@@ -1,0 +1,60 @@
+<div class="b_body">
+<a href="/about/job.php"><img src="../images/ad/ft_ad1.gif" width="470" height="80" border="0" /></a>
+<a href="/feedback/seller.php"><img src="../images/ad/ft_ad2.gif" width="460" height="80" border="0" /></a>
+
+ </div>
+<?php include template("block_main_friendlink");?>
+<div id="ftw">
+	<div id="ft">
+		
+		<ul class="cf">
+        <table width="935" height="30" border="0" cellpadding="0" cellspacing="0" style="background:#efefef">
+      <tr>
+        <td align="center" valign="middle">
+			
+		<a href="/about/us.php">关于<?php echo $INI['system']['abbreviation']; ?></a>| 
+			
+		<a href="/help/link.php">网站合作 </a>| 
+			
+		<a href="/about/contact.php">联系我们 </a>| 
+			
+		<a href="/feedback/seller.php">网络营销 </a>| 
+			
+		<a href="/about/job.php">招聘信息 </a>| 
+			
+		<a href="/feedback/suggest.php">意见反馈 </a>| 
+			
+		<a href="/about/privacy.php">服务声明 </a>| 
+			
+		<a href="/help/faqs.php">常见问题 </a>| 
+			
+		<a href="/about/terms.php">代理招商 </a>| 
+        <?php if(is_manager(false, true)){?>
+		<a href="/manage/index.php">管理<?php echo $INI['system']['abbreviation']; ?></a>
+					<?php }?>
+  			  
+			
+		</td>
+      </tr>
+    </table>
+				</ul>
+			</li>
+		
+		</ul>
+       
+		<div class="copyright" style=" width:980px;">
+		<p style="font-size:14px; font-family:'微软雅黑';"> 房团长咨询热线：400-009-0517， 邮箱：hotline@sohochina.com<br> </p><p>&copy;<span>2010</span>&nbsp;<?php echo $INI['system']['sitename']; ?>（fangtuanzhang.com）版权所有&nbsp;<a href="http://www.miibeian.gov.cn/" target="_blank"><?php echo $INI['system']['icp']; ?></a>&nbsp;.<?php if($INI['system']['statcode']){?>&nbsp;<?php echo $INI['system']['statcode']; ?><?php }?></p>
+		
+		</div>
+        <div class="logo-footer" align="center">
+			<a href="#"><img src="/static/img/footImg1.jpg" /></a>
+            <a href="#"><img src="/static/img/footImg2.jpg" /></a>
+            <a href="#"><img src="/static/img/footImg3.jpg" /></a>
+            <a href="#"><img src="/static/img/footImg4.jpg" /></a>
+            <a href="#"><img src="/static/img/footImg5.jpg" /></a>
+            <a href="#"><img src="/static/img/footImg6.jpg" /></a>
+		</div>
+		</div>
+	</div>
+</div>
+<?php include template("html_footer");?>
