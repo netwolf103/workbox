@@ -34,4 +34,24 @@ function ice_theme_js() {
 	wp_enqueue_script('jquery');
 }
 add_action('init', 'ice_theme_js');
+
+function ice_menu_items($classes)
+{
+	static $colors = array(
+		'border1',
+		'border2',
+		'border3',
+		'border4',
+		'border5',
+		'border6',
+		'border7',
+	);
+
+	$key = array_rand($colors);
+	array_push($classes, 'border', $colors[$key]);
+	unset($colors[$key]);
+
+	return $classes;
+}
+add_filter( 'nav_menu_css_class', 'ice_menu_items' )
 ?>

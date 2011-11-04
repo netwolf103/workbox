@@ -59,9 +59,10 @@ body {
 	display:inline;
 	float:left;
 	height:18px;
-	margin:0 0 0 15px;
+	margin:0 0 0 25px;
 	font-size:1.3em;
-	text-align:right;
+	text-align:center;
+	padding:3px 8px;
 }
 
 .menu a { 
@@ -78,6 +79,96 @@ body {
 .clear {
 	display:block;
 	clear:both;
+}
+
+/* CSS Color
+*******************************************************************/
+.border a:hover {
+	color:#fff;
+}
+
+.border1 {
+	border-color:#EE8929;
+}
+
+.border1:hover {
+	background-color:#EE8929;
+}
+
+.border1 a {
+	color:#EE8929;
+}
+
+.border2 {
+	border-color:#00A0DF;
+}
+
+.border2:hover {
+	background-color:#00A0DF;
+}
+
+.border2 a {
+	color:#00A0DF;
+}
+
+.border3 {
+	border-color:#30308F;
+}
+
+.border3:hover {
+	background-color:#30308F;
+}
+
+.border3 a {
+	color:#30308F;
+}
+
+.border4 {
+	border-color:#9E0D82;
+}
+
+.border4:hover {
+	background-color:#9E0D82;
+}
+
+.border4 a {
+	color:#9E0D82;
+}
+
+.border5 {
+	border-color:#E40075;
+}
+
+.border5:hover {
+	background-color:#E40075;
+}
+
+.border5 a {
+	color:#E40075;
+}
+
+.border6 {
+	border-color:#E51C2D;
+}
+
+.border6:hover {
+	background-color:#E51C2D;
+}
+
+.border6 a {
+	color:#E51C2D;
+}
+
+.border7 {
+	border-color:#9BC442;
+}
+
+.border7:hover {
+	background-color:#9BC442;
+}
+
+.border7 a {
+	color:#9BC442;
 }
 
 /* CSS Grid
@@ -120,6 +211,7 @@ div.grid-item div.grid-image {
 	position:absolute;
 	right:0;
 	top:37px;
+	font-weight:bold;
 }
 
 #logo {
@@ -132,8 +224,9 @@ div.grid-item div.grid-image {
 	text-indent:-9999px;
 }
 
-.main-navigation a {
-	text-shadow: 2px 3px 5px #949396;
+.main-navigation li {
+	border-style:solid;
+	border-width: 1px 0 1px 0; 
 }
 
 
@@ -200,6 +293,18 @@ div.grid-item div.grid-image {
 .footer-navigation {
 	position:absolute;
 	right:0;
+}
+
+.footer-navigation .menu li {
+	padding:0;
+}
+
+.footer-navigation .menu li:hover {
+	background-color:transparent;
+}
+
+.footer-navigation .menu li a {
+	color:#949396;
 }
 
 #footer, .footer-navigation .menu li {
