@@ -1,1 +1,0 @@
-ALTER TABLE `category` ADD `relate_data` TEXT NULL COMMENT '相关数据'
