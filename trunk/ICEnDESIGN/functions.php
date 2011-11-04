@@ -26,4 +26,10 @@ function ice_setup() {
 	) );
 }
 endif;
+
+function ice_theme_js() {
+	if (is_admin()) return;
+	wp_enqueue_script('jquery');
+}
+add_action('init', 'ice_theme_js');
 ?>
