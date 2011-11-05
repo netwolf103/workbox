@@ -10,7 +10,7 @@ function ice_setup() {
     add_image_size('featured', 560, 315, true);
     add_image_size('category', 80, 80, true);
 
-	add_image_size('home1', 331, 331, true);
+	add_image_size('grid-thumbnails', 331, 331, true);
 
 	// Make theme available for translation
 	// Translations can be filed in the /languages/ directory
