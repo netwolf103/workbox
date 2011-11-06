@@ -53,5 +53,5 @@ function ice_menu_items($classes)
 
 	return $classes;
 }
-add_filter( 'nav_menu_css_class', 'ice_menu_items' )
+//add_filter( 'nav_menu_css_class', 'ice_menu_items' )
 ?>
