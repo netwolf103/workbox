@@ -51,8 +51,8 @@ body {
 }
 
 #wrapper  {
-	width:1024px;
-	margin:0 auto;
+	/*width:1024px;*/
+	margin:0 30px;
 }
 
 .menu li {
@@ -205,7 +205,7 @@ div.grid-item div.grid-image {
 *********************************************************************************************/
 #header {
 	position:relative;
-	height:95px;
+	height:65px;
 	z-index:2;
 	background:url('images/s.gif') 0 0 repeat;
 	clear:both;
