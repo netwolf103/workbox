@@ -47,6 +47,11 @@
 						<input type="text" size="30" name="title" id="team-create-title" class="f-input" value="${htmlspecialchars($team['title'])}" datatype="require" require="true" />
 					</div>
 					<div class="field">
+						<label>项目Logo</label>
+						<input type="file" size="30" name="logo" id="team-create-logo" class="f-input" />
+						<!--{if $team['logo']}--><span class="hint">${team_image($team['logo'])}</span><!--{/if}-->
+					</div>
+					<div class="field">
 						<label>市场价</label>
 						<input type="text" size="10" name="market_price" id="team-create-market-price" class="number" value="${moneyit($team['market_price'])}" datatype="money" require="true" />
 						<label>网站价</label>
