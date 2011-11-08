@@ -49,9 +49,7 @@
 					</tbody></table>
 				</div>
 				<div class="sidebar">
-					<!-- {if $detail[$first['id']]['is_today']} -->
-					<a class="new pngfix" title="点击查看详情" href="/team.php?id={$first['id']}" rel="nofollow"></a>
-					<!-- {/if} -->
+
 					<div class="cover">
 						<a title="" href="/team.php?id={$first['id']}" rel="nofollow">
 						<img src="${team_image($first['image'])}" alt="{$first['title']}" title="点击查看详情"></a>
@@ -73,9 +71,7 @@
 </h1>
 
 <div class="cover">
-<!-- {if $detail[$team['id']]['is_today']} -->
-<a class="new pngfix" title="点击查看详情" href="/team.php?id={$team['id']}" rel="nofollow"></a>
-<!-- {/if} -->
+
 <a title="{$team['title']}" href="/team.php?id={$team['id']}" rel="nofollow"><img src="${team_image($team['image'])}" width="290"  title="点击查看详情" alt="" ></a>
 </div>
 <div class="inner">
