@@ -34,7 +34,7 @@ else if ( is_post() ) {
 	$insert = array(
 		'title', 'market_price', 'team_price', 'end_time', 
 		'begin_time', 'expire_time', 'min_number', 'max_number', 
-		'summary', 'notice', 'per_number','permin_number','allowrefund', 'product','image', 'image1', 'image2', 'flv', 'now_number',
+		'summary', 'notice', 'per_number','permin_number','allowrefund', 'product','logo','image', 'image1', 'image2', 'flv', 'now_number',
 		'detail', 'userreview', 'card', 'systemreview', 
 		'conduser', 'buyonce', 'bonus', 'sort_order',
 		'delivery', 'mobile', 'address', 'fare', 
@@ -54,6 +54,7 @@ else if ( is_post() ) {
 	$team['pre_number'] = abs(intval($team['pre_number']));
 	$team['end_time'] = strtotime($team['end_time']);
 	$team['expire_time'] = strtotime($team['expire_time']);
+	$team['logo'] = upload_image('logo',$eteam['logo'],'team');
 	$team['image'] = upload_image('upload_image',$eteam['image'],'team',true);
 	$team['image1'] = upload_image('upload_image1',$eteam['image1'],'team');
 	$team['image2'] = upload_image('upload_image2',$eteam['image2'],'team');
