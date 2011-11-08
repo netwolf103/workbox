@@ -489,7 +489,7 @@ function upload_flv($input, $flv=null, $type='flv') {
 
 		RecursiveMkdir( IMG_ROOT . '/' . "{$type}/{$year}/{$day}" );
 		$flv = "{$type}/{$year}/{$day}/{$n}";
-		$path = IMG_ROOT . '/' . $image;
+		$path = IMG_ROOT . '/' . $flv;
 
 		move_uploaded_file($z['tmp_name'], $path);
 		return $flv;
