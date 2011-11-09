@@ -126,17 +126,17 @@
 						<span class="hint">格式如：{黄色}{绿色}{红色}@{大号}{中号}{小号}@{男款}{女款}，分组使用@符号分隔 , 用户购买的必选项</span>
 					</div>
 					<div class="field">
-						<label>商品图片</label>
+						<label>首页图</label>
 						<input type="file" size="30" name="upload_image" id="team-create-image" class="f-input" />
 						<!--{if $team['image']}--><span class="hint">${team_image($team['image'])}</span><!--{/if}-->
 					</div>
 					<div class="field">
-						<label>商品图片1</label>
+						<label>次页图</label>
 						<input type="file" size="30" name="upload_image1" id="team-create-image1" class="f-input" />
 						<!--{if $team['image1']}--><span class="hint" id="team_image_1">${team_image($team['image1'])}&nbsp;&nbsp;<a href="javascript:;" onclick="X.team.imageremove({$team['id']}, 1);">删除</a></span><!--{/if}-->
 					</div>
 					<div class="field">
-						<label>商品图片2</label>
+						<label>户型图</label>
 						<input type="file" size="30" name="upload_image2" id="team-create-image2" class="f-input" />
 						<!--{if $team['image2']}--><span class="hint" id="team_image_2">${team_image($team['image2'])}&nbsp;&nbsp;<a href="javascript:;" onclick="X.team.imageremove({$team['id']}, 2);">删除</a></span><!--{/if}-->
 					</div>
