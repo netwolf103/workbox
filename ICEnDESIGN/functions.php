@@ -6,7 +6,7 @@ function ice_setup() {
 
 	// This theme uses post thumbnails
 	add_theme_support( 'post-thumbnails' );
-    set_post_thumbnail_size(187, 108, true);
+    set_post_thumbnail_size(175, 108, true);
     add_image_size('featured', 560, 315, true);
     add_image_size('category', 80, 80, true);
 
@@ -54,4 +54,30 @@ function ice_menu_items($classes)
 	return $classes;
 }
 //add_filter( 'nav_menu_css_class', 'ice_menu_items' )
+
+function ice_post_container_class( $class = '' )
+{
+	echo 'class="' . join( ' ', ice_get_post_container_class( $class ) ) . '"';
+}
+
+function ice_get_post_container_class( $class = '' )
+{
+	global $wp_query;
+
+	$classes = array();
+	
+	if ( is_category() ) {
+		$cat = $wp_query->get_queried_object();
+		$classes[] = 'post-container';
+		$classes[] = 'post-container-' . sanitize_html_class( $cat->slug, $cat->cat_ID );
+	}
+
+	if ( !empty( $class ) ) {
+		if ( !is_array( $class ) )
+			$class = preg_split( '#\s+#', $class );
+		$classes = array_merge( $classes, $class );
+	}
+
+	return $classes;
+}
 ?>
