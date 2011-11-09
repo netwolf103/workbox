@@ -8,6 +8,16 @@ need_auth('team');
 $id = abs(intval($_GET['id']));
 $team = $eteam = Table::Fetch('team', $id);
 
+$action = isset($_GET['action']) ? $_GET['action'] : '';
+
+if($action == 'remove') {
+	$image_id = abs(intval($_GET['image_id']));
+
+	DB::Query( "DELETE FROM huxing WHERE id='{$image_id}'" );
+	Session::Set('notice', '删除成功');
+	redirect( WEB_ROOT . "/manage/team/huxing.php?id={$id}");
+}
+
 if ( is_get() && empty($team) ) {
 	redirect( WEB_ROOT . '/manage/team/edit.php' );
 }
@@ -22,8 +32,10 @@ else if ( is_post() ) {
 }
 
 /* huxing list */
-$condition = array('team_id' => $id, );
-$huxing_list = DB::LimitQuery('huxing', $condition);
+$condition = array('team_id' => $id );
+$huxing_list = DB::LimitQuery('huxing', array(
+	'condition' => $condition,
+));
 
 $users = Table::Fetch('user', Utility::GetColumn($vouchers, 'user_id'));
 
