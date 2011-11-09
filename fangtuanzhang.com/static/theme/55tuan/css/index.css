@@ -197,7 +197,7 @@ dd#bd{position:relative;z-index:1;width:960px;margin:0 auto;padding:30px 0 65px;
 
 #content .secondary { clear: both; font-family: Helvetica,arial,sans-serif; padding-bottom:20px; }
 #content .secondary .cover img { display: block; height: 188px; margin: 0 auto 15px; width: 290px; }
-#content .secondary h1 { font-size: 14px; height: 30px; padding: 1px 16px 0; }
+#content .secondary h1 { font-size: 14px; height: 30px; padding: 8px; }
 #content .secondary h1 span { font-family: arial,sans-serif; color:#e56b07; text-align:right;}
 #content .secondary h1 span a{color:#e56b07;}
 #content .secondary h1 a { font-size:14px;color: #000000; }
