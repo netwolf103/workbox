@@ -21,8 +21,7 @@
 
 		<div id="nav-below" class="clear">
 			<?php next_posts_link( __( '<span class="meta-nav ">&larr; Older posts</span>', 'twentyten' ) ); ?>
-			<span class="meta-nav-spacing" /></span>
-			<?php previous_posts_link( __( '<span class="meta-nav">Newer posts &rarr;</span>', 'twentyten' ) ); ?>
+			<?php previous_posts_link( __( '<span class="meta-nav-spacing" /></span><span class="meta-nav">Newer posts &rarr;</span>', 'twentyten' ) ); ?>
 		</div>
 
 	</div>
