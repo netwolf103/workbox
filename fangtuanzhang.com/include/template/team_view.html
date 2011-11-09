@@ -19,7 +19,7 @@
  <table class="table" width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td width="80"><!--{if $team['close_time']==0}--><a class="deal-today-link" href="/team.php?id={$team['id']}">项目名称：</a><!--{/if}--> </td>
-    <td width="*">{$team['title']}</td>
+    <td width="*"><!--{if $team['logo']}--><img src="${team_image($team['logo'])}" alt="{$team['title']}" style="vertical-align:middle;" /><!--{else}-->{$team['title']}<!--{/if}--></td>
     <td width="120"><button>观看项目宣传片</button></td>
   </tr>
 </table>
@@ -89,24 +89,14 @@
 					<!--{if $team['image1']||$team['image2']}-->
 						<div class="mid">
 							<ul>
-								<li class="first"><img src="${team_image($team['image'])}"/></li>
 							<!--{if $team['image1']}-->
-								<li><img src="${team_image($team['image1'])}"/></li>
+								<li class="first"><img src="${team_image($team['image1'])}"/></li>
 							<!--{/if}-->
 							<!--{if $team['image2']}-->
 								<li><img src="${team_image($team['image2'])}"/></li>
 							<!--{/if}-->
 							</ul>
-							<div id="img_list">
-								<a ref="1" class="active">1</a>
-							<!--${$imageindex=1;}-->
-							<!--{if $team['image1']}-->
-								<a ref="${++$imageindex}" >{$imageindex}</a>
-							<!--{/if}-->
-							<!--{if $team['image2']}-->
-								<a ref="${++$imageindex}" >{$imageindex}</a>
-							<!--{/if}-->
-							</div> 
+
 						</div>
 						<!--{else}-->
 							<img src="${team_image($team['image'])}" width="440" height="280" />
@@ -120,6 +110,13 @@
             <div class="digest" style="background:#fff;"><br />${nl2br(strip_tags($team['summary']))}</div>
             <!--{/if}--> 
             </div>
+
+			<div style="border:2px solid #EE9270;margin:5px 0;padding:8px;text-align:center;overflow:hidden;">
+				 <h2 style="font-size:16px;text-align:left;">户型图</h2>
+				<!--{if $team['image2']}-->
+				<img src="${team_image($team['image2'])}"/>
+				<!--{/if}-->
+			</div>
             
             <div id="deal-stuff" class="cf">
                 <div class="clear box ${($partner&&!option_yes('teamwhole'))?'box-split':''}">
