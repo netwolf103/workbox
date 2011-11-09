@@ -6,6 +6,7 @@ function current_manageteam($selector='edit', $id=0) {
 		"/manage/team/editvoucher.php?id={$id}" => '商户券信息',
 		"/manage/team/editzz.php?id={$id}" => '杂项信息',
 		"/manage/team/editseo.php?id={$id}" => 'SEO信息',
+		"/manage/team/huxing.php?id={$id}" => '户型图',
 	);
 	$l = "/manage/team/{$selector}.php?id={$id}";
 	return current_link($l, $a);
