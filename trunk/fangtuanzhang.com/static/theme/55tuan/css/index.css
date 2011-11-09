@@ -1204,3 +1204,37 @@ html {
 
 .item_fl{ width:50px; margin-top:-30px;}
 .item_fl a{ font-size:14px;}
+
+#scroll {
+	border:2px solid #EE9270;
+	margin:0 0 5px 0;
+	overflow:hidden;
+	padding:8px;
+}
+
+#scroll-nav {
+	position:relative;
+	height:38px;
+	margin-top:8px;
+	font-size:16px;
+	color:#666666;
+	border:2px solid #EE9270;
+	border-bottom:0;
+	padding:8px;
+}
+
+#scroll-nav .prev, #scroll-nav .next {
+	position:absolute;
+}
+
+#scroll-nav .prev {
+	left:8px;
+}
+
+#scroll-nav .next {
+	right:8px;
+}
+
+#scroll-container {
+	width:200%
+}
