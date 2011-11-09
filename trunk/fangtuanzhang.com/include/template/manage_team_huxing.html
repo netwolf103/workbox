@@ -1,0 +1,50 @@
+<!--{include manage_header}-->
+
+<div id="bdw" class="bdw">
+<div id="bd" class="cf">
+<div id="leader">
+	<div class="dashboard" id="dashboard">
+		<ul>${mcurrent_team('team')}</ul>
+	</div>
+	<div id="content" class="clear mainwide">
+        <div class="clear box">
+            <div class="box-top"></div>
+            <div class="box-content">
+                <div class="head">
+					<h2>编辑户型图</h2>
+					<ul class="filter">${current_manageteam('huxing', $team['id'])}</ul>
+				<!--{/if}-->
+				</div>
+                <div class="sect">
+					<div class="wholetip clear"><h3>1、上传户型图</h3></div>
+					<form method="post" action="/manage/team/huxing.php?id={$team['id']}" enctype="multipart/form-data" class="validator">
+					<input type="hidden" name="id" value="{$team['id']}" />
+					<div class="field">
+						<label>户型图</label>
+						<input type="file" size="30" name="upload_image" class="f-input" style="width:300px;"/> <input type="submit" value="上传户型图" name="commit" id="leader-submit" class="formbutton" style="margin-left:120px;"/>
+					</div>
+					</form>
+
+					<div class="wholetip clear"><h3>2、户型图列表</h3></div>
+					<table id="orders-list" cellspacing="0" cellpadding="0" border="0" class="coupons-table">
+					<tr><th width="200">户型图</th><th width="100" nowrap>操作</th></tr>
+					<!--{loop $huxing_list $index $one}-->
+					<tr id="order-list-id-{$one['id']}">
+						<td><img src="${team_image($one['image'], true)}"></td>
+						<td class="op"><a href="${team_image($one['image'])}">查看大图</a>&nbsp;</td>
+					</tr>
+					<!--{/loop}-->
+                    </table>
+                </div>
+            </div>
+            <div class="box-bottom"></div>
+        </div>
+	</div>
+<div id="sidebar">
+</div>
+
+</div>
+</div> <!-- bd end -->
+</div> <!-- bdw end -->
+
+<!--{include manage_footer}-->
