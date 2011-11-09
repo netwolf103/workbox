@@ -65,6 +65,16 @@ if ($team['team_type'] == 'goods') {
 }
 /*xxk*/
 
+// 户型图
+$condition = array('team_id' => $id );
+
+$count = Table::Count('huxing', $condition);
+list($pagesize, $offset, $pagestring) = pagestring($count, 50);
+
+$huxing_list = DB::LimitQuery('huxing', array(
+	'condition' => $condition,
+));
+
 /*seo*/
 $seo_title = $team['seo_title'];
 $seo_keyword = $team['seo_keyword'];
