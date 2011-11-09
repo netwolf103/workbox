@@ -81,6 +81,31 @@ body {
 	clear:both;
 }
 
+#nav-below {
+	position:relative;
+	text-align:right;
+	border-top:1px #ddd solid;
+	border-bottom:1px #ddd solid;
+	line-height:28px;
+}
+
+#nav-below a {
+	text-decoration:none;
+}
+
+.meta-nav {
+	color:#86848B;
+	font-size:13px;
+}
+
+.meta-nav:hover {
+	color:#000;
+}
+
+.meta-nav-spacing {
+	padding:0 20px;
+}
+
 /* CSS Color
 *******************************************************************/
 .border:hover {
@@ -254,7 +279,7 @@ div.grid-item div.grid-image {
 .post-item {
 	width:180px;
 	float:left;
-	margin-left:35px;
+	margin:15px 0 0 32px;
 }
 
 .post-item a {
@@ -278,6 +303,24 @@ div.grid-item div.grid-image {
 
 .post-thumbnail {
 
+}
+
+/* CSS Category */
+.post-container {
+	margin:10px 0;
+	padding:8px 0;
+	background:#e9e9e9;
+	background:url('images/bg_posts.png') transparent scroll repeat 0 0;
+}
+
+.post-container h3.the_title {
+	font-size:12px;
+	height:22px;
+	overflow:hidden;
+}
+
+.attachment-post-thumbnail {
+	border:1px solid #D7D7D7;
 }
 
 /* CSS Footer
