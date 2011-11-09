@@ -31,7 +31,7 @@
 					<!--{loop $huxing_list $index $one}-->
 					<tr id="order-list-id-{$one['id']}">
 						<td><img src="${team_image($one['image'], true)}"></td>
-						<td class="op"><a href="${team_image($one['image'])}">查看大图</a>&nbsp;</td>
+						<td class="op"><a href="${team_image($one['image'])}">查看大图</a> | <a href="/manage/team/huxing.php?action=remove&image_id={$one['id']}&id={$one['team_id']}">删除</a></td>
 					</tr>
 					<!--{/loop}-->
                     </table>

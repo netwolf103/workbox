@@ -110,13 +110,21 @@
             <div class="digest" style="background:#fff;"><br />${nl2br(strip_tags($team['summary']))}</div>
             <!--{/if}--> 
             </div>
-
-			<div style="border:2px solid #EE9270;margin:5px 0;padding:8px;text-align:center;overflow:hidden;">
-				 <h2 style="font-size:16px;text-align:left;">户型图</h2>
-				<!--{if $team['image2']}-->
-				<img src="${team_image($team['image2'])}"/>
-				<!--{/if}-->
+			
+			<!--{if $huxing_list}-->
+			<div id="scroll-nav">
+				<h3>户型图:</h3>
+				<a href="" class="prev">前后</a> <a href="" class="next">向前</a>
 			</div>
+
+			<div id="scroll">
+				<div id="scroll-container">
+				<!--{loop $huxing_list $index $one}-->
+				<a href="${team_image($one['image'])}" target="_blank" title="点击查看大图"><img src="${team_image($one['image'], true)}" alt="点击查看大图"></a>
+				<!--{/loop}-->
+				</div>
+			</div>
+			<!--{/if}-->
             
             <div id="deal-stuff" class="cf">
                 <div class="clear box ${($partner&&!option_yes('teamwhole'))?'box-split':''}">
