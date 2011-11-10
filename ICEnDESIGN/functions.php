@@ -7,9 +7,9 @@ function ice_setup() {
 	// This theme uses post thumbnails
 	add_theme_support( 'post-thumbnails' );
     set_post_thumbnail_size(175, 108, true);
-    add_image_size('featured', 560, 315, true);
-    add_image_size('category', 80, 80, true);
 
+    add_image_size('featured-thumbnails', 226, 151, true);
+    add_image_size('single-thumbnails', 706, 435, true);
 	add_image_size('grid-thumbnails', 331, 331, true);
 
 	// Make theme available for translation
@@ -79,5 +79,25 @@ function ice_get_post_container_class( $class = '' )
 	}
 
 	return $classes;
+}
+
+function the_post_other_thumbnail( $size = 'post-thumbnail', $attr = '' )
+{
+	echo get_the_post_other_thumbnail( NULL, $size, $attr );
+}
+
+function get_the_post_other_thumbnail( $post_id = NULL, $size = 'post-thumbnail', $attr = '' )
+{
+	global $post;
+	$post_id = ( NULL === $post_id ) ? $post->ID : $post_id;
+
+	$attachments = get_children('post_parent=' .$post_id . '&post_type=attachment&post_mime_type=image');
+	$html = '';
+
+	foreach($attachments as $attachment) {
+		$html .= '<a href="'. wp_get_attachment_url($attachment->ID) .'">' . wp_get_attachment_image($attachment->ID, $size, false, $attr) . '</a>';
+	}
+
+	return $html;
 }
 ?>

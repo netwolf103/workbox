@@ -39,6 +39,11 @@ font-weight: normal;
 q:before, q:after {content: '';}
 abbr, acronym {border: 0;}
 
+p {
+	margin-top:15px;
+	line-height:21px;
+}
+
 /* CSS Base
 *********************************************************************************************/
 body {
@@ -322,6 +327,50 @@ div.grid-item div.grid-image {
 
 .attachment-post-thumbnail {
 	border:1px solid #D7D7D7;
+}
+
+/* CSS Single */
+.single-container {
+	margin:10px 0;
+	padding:8px 0;
+	padding:0 50px;
+}
+
+.single-container .post-item {
+	float:none;
+	width:100%;
+	margin:0;
+}
+
+.attachment-single-thumbnails {
+	border:1px #c3c3c3 solid;
+}
+
+.single-left {
+	display:block;
+	float:left;
+}
+
+.single-right {
+	float:right;
+	width:450px;
+}
+
+.single-right .the_title {
+	font-size:16px;
+	font-weight:bold;
+	padding:20px 0;
+	border-top:1px #c3c3c3 dotted;
+	border-bottom:1px #c3c3c3 dotted;
+}
+
+.featured {
+	margin:10px 0;
+}
+
+.featured .attachment-featured-thumbnails {
+	border:1px #c3c3c3 solid;
+	margin:3px;
 }
 
 /* CSS Footer
