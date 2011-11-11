@@ -364,6 +364,10 @@ div.grid-item div.grid-image {
 	border-bottom:1px #c3c3c3 dotted;
 }
 
+.single-right .single-content {
+	font-size:13px;
+}
+
 .featured {
 	margin:10px 0;
 }
