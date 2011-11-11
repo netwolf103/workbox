@@ -353,6 +353,7 @@ div.grid-item div.grid-image {
 .single-left {
 	display:block;
 	float:left;
+	width:720px;
 }
 
 .single-right {
@@ -379,6 +380,20 @@ div.grid-item div.grid-image {
 .featured .attachment-featured-thumbnails {
 	border:1px #c3c3c3 solid;
 	margin:3px;
+}
+
+.store_link {
+	font-size:14px;
+	padding-top:15px;
+}
+
+.store_link a {
+	text-decoration:underline;
+}
+
+.video-container {
+	border-top:1px #c3c3c3 dotted;
+	padding-top:8px;
 }
 
 /* CSS Footer
