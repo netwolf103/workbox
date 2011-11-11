@@ -10,18 +10,34 @@
 	<meta name="description" content="<?php bloginfo('description'); ?>" />
 	
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/javascript/css/lightbox.css" type="text/css" media="screen" />
 	<!--[if IE 6]>
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style-ie6.css" type="text/css" media="screen" />
 	<![endif]-->
 
-	<script type='text/javascript' src='<?php bloginfo('wpurl') ?>/wp-includes/js/jquery/jquery.js'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url') ?>/javascript/jquery.min.js'></script>
+	<?php if( is_home() ): ?>
 	<script type='text/javascript' src='<?php bloginfo('template_url') ?>/javascript/jquery.easing.1.3.js'></script>
 	<script type='text/javascript' src='<?php bloginfo('template_url') ?>/javascript/jquery.vgrid.0.1.4-mod.js'></script>
+	<?php endif; ?>
+	<script type='text/javascript' src='<?php bloginfo('template_url') ?>/javascript/jquery.lightbox.js'></script>
 	<script type='text/javascript' src='<?php bloginfo('template_url') ?>/javascript/init.js'></script>
-	
+
+	<script type="text/javascript">
+	(function($){
+
+		$(document).ready(function(){
+			$("div.featured > .lightbox").lightbox({
+				fileLoadingImage: "<?php bloginfo('template_url') ?>/javascript/images/loading.gif",
+				fileBottomNavCloseImage: "<?php bloginfo('template_url') ?>/javascript/images/closelabel.gif",
+			});
+		});
+
+	})(jQuery);
+	</script>
+
 	<!-- pingback url -->
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-	
 	<?php wp_head(); ?>
 </head>
 

@@ -95,7 +95,7 @@ function get_the_post_other_thumbnail( $post_id = NULL, $size = 'post-thumbnail'
 	$html = '';
 
 	foreach($attachments as $attachment) {
-		$html .= '<a href="'. wp_get_attachment_url($attachment->ID) .'">' . wp_get_attachment_image($attachment->ID, $size, false, $attr) . '</a>';
+		$html .= '<a href="'. wp_get_attachment_url($attachment->ID) .'" class="lightbox" rel="flowers">' . wp_get_attachment_image($attachment->ID, $size, false, $attr) . '</a>';
 	}
 
 	return $html;
