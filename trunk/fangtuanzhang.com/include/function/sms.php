@@ -5,23 +5,16 @@ function sms_send($phone, $content) {
 		return '短信长度低于20汉字？长点吧～';
 	}
 
-	/* include customsms function */
-	$smsowner_file = dirname(__FILE__) . '/smsowner.php';
-	if (file_exists($smsowner_file)) { 
-		require_once( $smsowner_file);
-		if(function_exists('sms_send_owner')) {
-			return sms_send_owner($phone, $content);
-		}
-	}
-	/* end include */
-
-	$user = strval($INI['sms']['user']); 
-	$pass = strtolower(md5($INI['sms']['pass']));
-	if(null==$user) return true;
-	$content = urlEncode($content);
-	$api = "http://notice.zuitu.com/sms?user={$user}&pass={$pass}&phones={$phone}&content={$content}";
-	$res = Utility::HttpRequest($api);
-	return trim(strval($res))=='+OK' ? true : strval($res);
+	$api = "http://sms2.eachwe.com/api.php";
+	$post=array();
+	$post['username']=$INI['sms']['smsbao_user'];
+	$post['password']=$INI['sms']['smsbao_pass'];
+	$post['method']='sendsms';
+	$post['mobile']=$phone;
+	$post['msg']=$content;
+	$res = Utility::HttpRequest($api,$post);
+	$res = mb_convert_encoding($res, 'UTF-8', 'GB2312');
+	return trim(strval($res))==0 ? true : strval($res);
 }
 
 function sms_secret($mobile, $secret, $enable=true) {
