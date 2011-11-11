@@ -11,7 +11,7 @@
 					
 					<div class="single-right">
 						<h3 class="the_title"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-						<div class="sing-content"><?php the_content(); ?></div>
+						<div class="single-content"><?php the_content(); ?></div>
 					</div>
 
 					<br class="clear" />
