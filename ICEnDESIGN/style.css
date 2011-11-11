@@ -288,6 +288,10 @@ div.grid-item div.grid-image {
 	margin:15px 0 0 32px;
 }
 
+.post-item p {
+	margin:0;
+}
+
 .post-item a {
 	text-decoration:none;
 	color:#86848B;
