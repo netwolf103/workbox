@@ -85,10 +85,6 @@
 								<input type="checkbox" class="allowrefund" name="allowrefund" value="Y" <!--{if $team['allowrefund']=='Y'}-->checked<!--{/if}-->/>&nbsp;是&nbsp;&nbsp;<span style="font-size:12px;color:#989898;">本项目允许用户发起 申请退款</span>						 
 					</div>
 					<div class="field">
-						<label>本单简介</label>
-						<div style="float:left;"><textarea cols="45" rows="5" name="summary" id="team-create-summary" class="f-textarea" datatype="require" require="true">${htmlspecialchars($team['summary'])}</textarea></div>
-					</div>
-					<div class="field">
 						<label>特别提示</label>
 						<div style="float:left;"><textarea cols="45" rows="5" name="notice" id="team-create-notice" class="f-textarea editor" style="width:710px;height:150px;">{$team['notice']}</textarea></div>
 						<span class="hint">关于本单项目的有效期及使用说明</span>
