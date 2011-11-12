@@ -81,6 +81,15 @@ body {
 	color:#000;
 }
 
+a {
+	color:#86848B;
+	text-decoration:none;
+}
+
+a:hover {
+	color:#000;
+}
+
 .clear {
 	display:block;
 	clear:both;
@@ -119,15 +128,6 @@ body {
 	margin-top:45px;
 	padding:3px;
 	font-size:14px;
-}
-
-#sidebar a {
-	color:#86848B;
-	text-decoration:none;
-}
-
-#sidebar a:hover {
-	color:#000;
 }
 
 .widgetblock {
@@ -344,15 +344,6 @@ div.grid-item div.grid-image {
 	margin-top:15px;
 }
 
-.post-item a {
-	text-decoration:none;
-	color:#86848B;
-}
-
-.post-item a:hover {
-	color:#000;
-}
-
 .post-item h2 {
 	padding:0 0 11px 0;
 	font-size:10px;
@@ -392,13 +383,28 @@ div.grid-item div.grid-image {
 	padding:0 50px;
 }
 
-.page-container {
+.blog-container {
+	margin-top:45px;
+}
+
+.category-blog {
+	border-bottom:1px #c3c3c3 dotted;
+	margin-top:10px;
+	padding:0 8px;
+}
+
+.post-meta {
+	font-size:12px;
+	padding-top:5px;
+}
+
+.page-container, .blog-container {
 	width:720px;
 	padding:8px;
 	float:left;
 }
 
-.page-container h3.the_title {
+.page-container h3.the_title, .blog-container h3.the_title {
 	font-size:15px;
 	padding:10px 0;
 	border-bottom:1px #c3c3c3 dotted;
@@ -408,7 +414,7 @@ div.grid-item div.grid-image {
 	margin-top:10px;
 }
 
-.single-container .post-item, .page-container .post-item {
+.single-container .post-item, .page-container .post-item, .blog-container .post-item {
 	float:none;
 	width:100%;
 	margin:0;
