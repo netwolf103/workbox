@@ -25,3 +25,7 @@
 .ice-content {
 	padding:8px;
 }
+
+#icon-options-ice {
+	background:url('ice-menu.png') 0 0 no-repeat;
+}
