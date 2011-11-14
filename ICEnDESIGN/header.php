@@ -8,6 +8,7 @@
 	
 	<!-- meta tags -->
 	<meta name="description" content="<?php bloginfo('description'); ?>" />
+	<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.ico" />
 	
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/javascript/css/lightbox.css" type="text/css" media="screen" />
