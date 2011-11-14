@@ -23,6 +23,17 @@ if( is_admin() )
 		if( $_POST ) {
 			$data['copyright'] = $_POST['copyright'];
 
+			if ( isset( $_FILES['sitelogo'] ) ) {
+				$f = $_FILES['sitelogo'];
+				if( $f['error'] == 0 ) {
+					$ext = substr($f['name'], -3);
+
+					@move_uploaded_file( $f['tmp_name'], dirname(__FILE__) . "/images/logo." . $ext );
+					$data['sitelogo'] = 'logo.'.$ext;
+				}
+
+			}
+
 			update_option( 'ice-theme-options', $data );
 		}
 

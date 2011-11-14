@@ -301,10 +301,6 @@ div.grid-item div.grid-image {
 	position:absolute;
 	left:0;
 	top:30px;
-	width:119px;
-	height:27px;
-	background:url('images/logo.png') 0 0 no-repeat; 
-	text-indent:-9999px;
 }
 
 .main-navigation li {
