@@ -39,7 +39,7 @@ if( is_admin() )
 
 ?>
 <div class="wrap">
-	<?php screen_icon('options-general'); ?>
+	<?php screen_icon('options-ice'); ?>
 	<h2><?php echo esc_html( $title ); ?></h2>
 	
 	<form id="ice-option-form" enctype="multipart/form-data" method="post">
