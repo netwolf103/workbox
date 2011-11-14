@@ -70,6 +70,27 @@ if( is_admin() )
 	<p class="submit"><input type="submit" value="<?php _e('Save Changes'); ?>" class="button-primary" id="submit" name="submit"></p>
 
 	</form>
+
+	<div id="about">
+		<div class="ice-title"><?php _e('Help & Support', 'ice'); ?></div>
+		<div class="ice-content">
+			<p><?php _e('You can contact me via the following ways:', 'ice'); ?></p>
+			<ul>
+				<li><?php _e('E-mail: netwolf103@gmail.com:', 'ice'); ?></li>
+				<li><?php _e('Skype: netwolf103', 'ice'); ?></li>
+				<li><?php _e('Skype: 303685256', 'ice'); ?></li>
+			</ul>
+
+			<form method="post" action="https://www.paypal.com/cgi-bin/webscr">
+					<?php _e('PayPal Donation:', 'ice'); ?>
+					<input type="hidden" value="_s-xclick" name="cmd">
+					<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+					<input type="image" border="0" alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif">
+					<img width="1" height="1" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" alt="">
+			</form>
+		</div>
+	</div>
 </div>
 <?php
 	}
