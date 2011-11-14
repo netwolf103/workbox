@@ -78,7 +78,7 @@ if( is_admin() )
 			<ul>
 				<li><?php _e('E-mail: netwolf103@gmail.com:', 'ice'); ?></li>
 				<li><?php _e('Skype: netwolf103', 'ice'); ?></li>
-				<li><?php _e('Skype: 303685256', 'ice'); ?></li>
+				<li><?php _e('QQ: 303685256', 'ice'); ?></li>
 			</ul>
 
 			<form method="post" action="https://www.paypal.com/cgi-bin/webscr">
