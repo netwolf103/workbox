@@ -69,7 +69,7 @@ if ( ! function_exists( 'ice_setup' ) )
 		add_image_size('single-thumbnails', 706, 435, true);
 		add_image_size('grid-thumbnails', 331, 331, true);
 
-		load_theme_textdomain( 'icen-design', TEMPLATEPATH . '/languages' );
+		load_theme_textdomain( 'ice', TEMPLATEPATH . '/languages' );
 
 		$locale = get_locale();
 		$locale_file = TEMPLATEPATH . "/languages/$locale.php";
