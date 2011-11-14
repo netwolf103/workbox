@@ -96,7 +96,9 @@ if ( ! function_exists( 'ice_option_value' ) )
 {
 	function ice_option_value( $key, $default = '', $display = false )
 	{
-		$value = get_option($key) ? get_option($key) : $default;
+		$options = get_option( 'ice-theme-options' );
+
+		$value = isset($options[$key]) ? $options[$key] : $default;
 
 		if($display) {
 			echo $value;

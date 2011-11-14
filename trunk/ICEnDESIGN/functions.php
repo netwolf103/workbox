@@ -19,10 +19,19 @@ if( is_admin() )
 	function ice_theme_options()
 	{
 		$title = __( 'Theme Options', 'ice' );
+
+		if( $_POST ) {
+			$data['copyright'] = $_POST['copyright'];
+
+			update_option( 'ice-theme-options', $data );
+		}
+
 ?>
 <div class="wrap">
 	<?php screen_icon('options-general'); ?>
 	<h2><?php echo esc_html( $title ); ?></h2>
+	
+	<form id="ice-option-form" enctype="multipart/form-data" method="post">
 
 	<div id="ice-options">
 		<div class="ice-title"><?php _e('Global Option', 'ice'); ?></div>
@@ -38,7 +47,7 @@ if( is_admin() )
 
 				<tr>
 					<th scope="row"><label for="copyright"><?php _e('Copyright', 'ice'); ?></label></th>
-					<td><textarea rows="5" class="large-text code" id="copyright" name="copyright"></textarea></td>
+					<td><textarea rows="5" class="large-text code" id="copyright" name="copyright"><?php ice_option_value('copyright', '', true); ?></textarea></td>
 				</tr>
 
 			</table>
@@ -48,6 +57,8 @@ if( is_admin() )
 	</div>
 
 	<p class="submit"><input type="submit" value="<?php _e('Save Changes'); ?>" class="button-primary" id="submit" name="submit"></p>
+
+	</form>
 </div>
 <?php
 	}
