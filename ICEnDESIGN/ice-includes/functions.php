@@ -92,19 +92,39 @@ if ( ! function_exists( 'ice_theme_js' ) )
 	}
 }
 
+if ( ! function_exists( 'ice_logo' ) )
+{
+	function ice_logo( $echo = true )
+	{
+		$sitelogo = ice_option_value('sitelogo');
+
+		if( file_exists( dirname(dirname(__FILE__)) . '/images/' . $sitelogo) ) {
+			$sitelogo = get_bloginfo('template_url') .'/images/'. $sitelogo;
+		} else {
+			$sitelogo = get_bloginfo('template_url') . '/images/default-logo.png';
+		}
+
+		if( $echo )
+			echo $sitelogo;
+
+		return $sitelogo;
+	}
+}
+
 if ( ! function_exists( 'ice_option_value' ) )
 {
-	function ice_option_value( $key, $default = '', $display = false )
+	function ice_option_value( $key, $default = '', $echo = false )
 	{
 		$options = get_option( 'ice-theme-options' );
 
 		$value = isset($options[$key]) ? $options[$key] : $default;
 
-		if($display) {
+		if($echo) {
 			echo $value;
 		}
 
 		return $value;
 	}
 }
+
 ?>

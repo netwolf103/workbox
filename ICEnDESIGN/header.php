@@ -46,7 +46,7 @@
 <div id="wrapper">
 
 	<div id="header">
-		<h1 id="logo">ICEnDESIGN</h1>
+		<h1 id="logo"><img src="<?php ice_logo(); ?>"></h1>
 		
 		<?php wp_nav_menu(array('theme_location' => 'main_menu', 'container_class' => 'main-navigation')); ?>
 	</div>
