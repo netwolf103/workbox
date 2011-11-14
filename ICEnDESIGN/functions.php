@@ -1,117 +1,55 @@
 <?php
-add_action( 'after_setup_theme', 'ice_setup' );
+require_once( dirname(__FILE__) . '/ice-includes/ice-loader.php' );
 
-if ( ! function_exists( 'ice_setup' ) ):
-function ice_setup() {
-
-	// This theme uses post thumbnails
-	add_theme_support( 'post-thumbnails' );
-    set_post_thumbnail_size(175, 108, true);
-
-    add_image_size('featured-thumbnails', 226, 151, true);
-    add_image_size('single-thumbnails', 706, 435, true);
-	add_image_size('grid-thumbnails', 331, 331, true);
-
-	// Make theme available for translation
-	// Translations can be filed in the /languages/ directory
-	load_theme_textdomain( 'icen-design', TEMPLATEPATH . '/languages' );
-
-	$locale = get_locale();
-	$locale_file = TEMPLATEPATH . "/languages/$locale.php";
-	if ( is_readable( $locale_file ) )
-		require_once( $locale_file );
-
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'main_menu'		=> __( 'Main Navigation', 'icen-design' ),
-		'footer_menu'	=> __( 'Footer Navigation', 'icen-design' ),
-	) );
-}
-endif;
-
-if ( function_exists('register_sidebar') )
+if( is_admin() )
 {
-	register_sidebar(
-		array
-		(
-			'name' => 'ice_sidebar',
-			'before_widget' => '<div id="%1$s" class="widgetblock %2$s">',
-			'after_widget' => '</div>',
-			'before_title' => '<h3 class="widgettitle">',
-			'after_title' => '</h3>',
-		)
-	);
-}
+	add_action('admin_head', 'ice_admin_head');
+	add_action('admin_menu', 'ice_admin_menu');
 
-function ice_theme_js() {
-	if (is_admin()) return;
-	wp_enqueue_script('jquery');
-}
-add_action('init', 'ice_theme_js');
-
-function ice_menu_items($classes)
-{
-	static $colors = array(
-		'border1',
-		'border2',
-		'border3',
-		'border4',
-		'border5',
-		'border6',
-		'border7',
-	);
-
-	$key = array_rand($colors);
-	array_push($classes, 'border', $colors[$key]);
-	unset($colors[$key]);
-
-	return $classes;
-}
-//add_filter( 'nav_menu_css_class', 'ice_menu_items' )
-
-function ice_post_container_class( $class = '' )
-{
-	echo 'class="' . join( ' ', ice_get_post_container_class( $class ) ) . '"';
-}
-
-function ice_get_post_container_class( $class = '' )
-{
-	global $wp_query;
-
-	$classes = array();
-	
-	if ( is_category() ) {
-		$cat = $wp_query->get_queried_object();
-		$classes[] = 'post-container';
-		$classes[] = 'post-container-' . sanitize_html_class( $cat->slug, $cat->cat_ID );
+	function ice_admin_head()
+	{
+		echo '<link rel="stylesheet" href="'.get_bloginfo('template_url').'/ice-admin/style.css" type="text/css" media="screen" />';
 	}
 
-	if ( !empty( $class ) ) {
-		if ( !is_array( $class ) )
-			$class = preg_split( '#\s+#', $class );
-		$classes = array_merge( $classes, $class );
+	function ice_admin_menu()
+	{
+		add_theme_page( __('Theme Options', 'ICE'), __('Theme Options', 'ICE'), 8, 'ice-admin-menu', 'ice_theme_options' );
 	}
 
-	return $classes;
-}
+	function ice_theme_options()
+	{
+		$title = __( 'Theme Options', 'ice' );
+?>
+<div class="wrap">
+	<?php screen_icon('options-general'); ?>
+	<h2><?php echo esc_html( $title ); ?></h2>
 
-function the_post_other_thumbnail( $size = 'post-thumbnail', $attr = '' )
-{
-	echo get_the_post_other_thumbnail( NULL, $size, $attr );
-}
+	<div id="ice-options">
+		<div class="ice-title"><?php _e('Global Option', 'ice'); ?></div>
 
-function get_the_post_other_thumbnail( $post_id = NULL, $size = 'post-thumbnail', $attr = '' )
-{
-	global $post;
-	$post_id = ( NULL === $post_id ) ? $post->ID : $post_id;
+		<div class="ice-content">
 
-	$attachments = get_children('post_parent=' .$post_id . '&post_type=attachment&post_mime_type=image');
-	$html = '';
+			<table class="form-table">
 
-	foreach($attachments as $attachment) {
-		$html .= '<a href="'. wp_get_attachment_url($attachment->ID) .'" class="lightbox" rel="flowers">' . wp_get_attachment_image($attachment->ID, $size, false, $attr) . '</a>';
+				<tr>
+					<th scope="row"><label for="sitelogo"><?php _e('Site Logo', 'ice'); ?></label></th>
+					<td><input type="file" id="sitelogo" name="sitelogo"></td>
+				</tr>
+
+				<tr>
+					<th scope="row"><label for="copyright"><?php _e('Copyright', 'ice'); ?></label></th>
+					<td><textarea rows="5" class="large-text code" id="copyright" name="copyright"></textarea></td>
+				</tr>
+
+			</table>
+
+		</div>
+
+	</div>
+
+	<p class="submit"><input type="submit" value="<?php _e('Save Changes'); ?>" class="button-primary" id="submit" name="submit"></p>
+</div>
+<?php
 	}
-
-	return $html;
 }
 ?>

@@ -1,0 +1,27 @@
+#ice-options {
+	margin-left:5px;
+	margin-right:325px;
+	margin-top:10px;
+	border:#DFDFDF;
+	border-width:0 1px 1px;
+	border-style:none solid solid;
+	border-radius:3px;
+	border-radius:3px;
+}
+
+.ice-title {
+	border-color:#DFDFDF;
+	box-shadow:0 1px 0 #FFFFFF inset;
+	background:#F1F1F1;
+	background-image:-moz-linear-gradient(center top , #F9F9F9, #ECECEC);
+	border-width:1px 0 1px 0;
+	border-style:solid;
+	font-size:15px;
+	padding:8px 10px;
+	border-top-left-radius:3px;
+	border-top-right-radius:3px;
+}
+
+.ice-content {
+	padding:8px;
+}
