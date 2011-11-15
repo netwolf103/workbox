@@ -47,7 +47,7 @@
 <div id="wrapper">
 
 	<div id="header">
-		<h1 id="logo"><img src="<?php ice_logo(); ?>"></h1>
+		<h1 id="logo"><a href="<?php bloginfo('home') ?>" title="<?php bloginfo('name'); ?>"><img src="<?php ice_logo(); ?>" alt="<?php bloginfo('name'); ?>"><a/></h1>
 		
 		<?php wp_nav_menu(array('theme_location' => 'main_menu', 'container_class' => 'main-navigation')); ?>
 	</div>
