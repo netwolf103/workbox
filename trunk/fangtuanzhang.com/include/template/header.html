@@ -16,7 +16,6 @@
 	   </div>
 
 		<ul id="menu"><!--{include block_navigator}--></ul>
-    
 
 		<div class="logins">
 		<!--{if $login_user}-->
@@ -46,22 +45,3 @@
 <!--{if $session_notice=Session::Get('error',true)}-->
 <div class="sysmsgw" id="sysmsg-error"><div class="sysmsg"><p>{$session_notice}</p><span class="close">关闭</span></div></div> 
 <!--{/if}-->
-
-<div id="searchBar">
-      <dl id="businessBar">
-        <dd>
-          <div class="business">
-          <a>按价格筛选： </a>
-          <a href="/team/Price_fl.php?Price=0" >4000元/㎡ 以下</a> 
-          <a href="/team/Price_fl.php?Price=1" >4000-5000元/㎡ </a> 
-          <a href="/team/Price_fl.php?Price=2" >5000-6000元/㎡ </a> 
-          <a href="/team/Price_fl.php?Price=3" >6000-7000元/㎡ </a> 
-          <a href="/team/Price_fl.php?Price=4" >7000-8000元/㎡ </a> 
-          <a href="/team/Price_fl.php?Price=6" >9000-10000元/㎡ </a> 
-          <a href="/team/Price_fl.php?Price=7" >10000元/㎡ 以上</a> 
-          <a href="/team/Price_fl.php" >全部</a> 
-
-          </div>
-        </dd>
-      </dl>
-</div>
