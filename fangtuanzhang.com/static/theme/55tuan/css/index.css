@@ -73,7 +73,7 @@ dd.formbutton:focus{border-color:#000;}
 body{background:#ffffff;}
 body.bg-alt{background:#ffffff;}
 body.newbie{background-position:50% 326px;}
-#hdw{height:187px;background:#ffffff url(i/bg-hd.gif) no-repeat 50% 50px;}
+#hdw{height:247px;background:#ffffff url(i/bg-hd.gif) no-repeat 50% 120px;}
 #bdw{min-height:500px;_height:500px;}
 #ftw{height:140px; width:935px; margin-left:auto; margin-right:auto; margin-top:10px; line-height:30px; border-top:1px #CCC solid}
 #hd{position:relative;z-index:2;width:960px;margin:0 auto;}
@@ -100,7 +100,7 @@ body.newbie{background-position:50% 326px;}
 	padding-left:10px;
 }
 
-#menu { width:700px; height:28px; margin:0 auto; list-style: none; position:absolute;top:150px;left:0;padding-left:30px; }
+#menu { width:700px; height:28px; margin:0 auto; list-style: none; position:absolute;top:220px;left:0;padding-left:30px; }
 #menu li { float:left; margin-left:2px;}
 #menu li a { display:block; width:87px; height:28px; line-height:28px; text-decoration:none; text-align:center; font-size:12px; color:#FFF; font-weight:bold}
 #menu li a:hover { background:url(i/nav_bg3.gif) no-repeat; color:#F60;}
