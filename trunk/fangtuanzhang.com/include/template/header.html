@@ -2,43 +2,31 @@
 
 <div id="hdw">
 	<div id="hd">
-<table width="950" border="0" cellspacing="0" cellpadding="0" align="center">
-  <tr>
-    <td width="204"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-      <tr>
-        <td><div class="indexs"><a href="javascript:;" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.fangtuanzhang.com/')" >设为首页</a>
-    <a href="javascript:;" onclick="window.external.addFavorite('http://www.fangtuanzhang.com/','房团长 - 在线团房网|西安房地产网|在线团购|西安房地产');">加入收藏</a></div></td>
-      </tr>
-      <tr>
-        <td><a href="/index.php" class="link"><img src="/static/css/i/logo.gif" alt="{$INI['system']['sitename']}" /></a></td>
-      </tr>
-    </table></td>
-    <td width="413"></td>
-    <td width="333"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-      <tr>
-        <td class="vcoupon"><a class="sms" onclick="X.miscajax('sms','subscribe');">&raquo; 短信订阅，免费！</a>&nbsp; <a class="sms" onclick="X.miscajax('sms','unsubscribe');">&raquo; 取消订阅</a></td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>
-        		<div id="header-subscribe-body" class="subscribe">
-		<form action="/subscribe.php" method="post" id="header-subscribe-form">
-			<label for="header-subscribe-email" class="text">想知道明天的团购是什么吗？</label>
-			<input type="hidden" name="city_id" value="{$city['id']}" />
-			<input id="header-subscribe-email" type="text" xtip="输入Email，订阅每日团购信息..." value="" class="f-text" name="email" />
-			<input type="hidden" value="1" name="cityid" />
-			<input type="submit" class="commit" value="订阅" />
-		</form>
-		</div>
-        </td>
-      </tr>
-    </table></td>
-  </tr>
-</table>
 
-       
+       <div id="top-banner" style="width:950px;">
+		<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width= width="99%" height="60">
+		  <param name="movie" value="/static/ad/长兴.swf" />
+		  <param name="quality" value="high" />
+		  <embed src="/static/ad/长兴.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="99%" height="60"></embed>
+		</object>
+
+		<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width= width="99%" height="60">
+		  <param name="movie" value="/static/ad/国际城.swf" />
+		  <param name="quality" value="high" />
+		  <embed src="/static/ad/国际城.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="99%" height="60"></embed>
+		</object>
+	   </div>
+
+	   <div id="top">
+			<a href="/index.php" class="link"><img src="/static/css/i/logo.gif" alt="{$INI['system']['sitename']}" /></a>
+		
+		<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width= width="740" height="70" id="top-left-banner">
+		  <param name="movie" value="/static/ad/梧桐苑.swf" />
+		  <param name="quality" value="high" />
+		  <embed src="/static/ad/梧桐苑.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="740" height="70"></embed>
+		</object>
+	   </div>
+
 		<ul id="menu"><!--{include block_navigator}--></ul>
     
 
