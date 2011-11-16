@@ -17,24 +17,6 @@
 
 		<ul id="menu"><!--{include block_navigator}--></ul>
 
-		<div class="logins">
-		<!--{if $login_user}-->
-			<ul class="links">
-				<li class="username">欢迎您，${mb_strimwidth($login_user['username'],0,10)}！</li>
-				<li class="account"><a href="/order/index.php" id="myaccount" class="account">我的{$INI['system']['abbreviation']}</a></li>
-				<li class="logout"><a href="/account/logout.php">退出</a></li>
-			</ul>
-		<!--{else}-->
-			<ul class="links">
-				<li class="login"><a href="/account/login.php">登录</a></li>
-				<li class="signup"><a href="/account/signup.php">注册</a></li>
-			</ul>
-		<!--{/if}-->
-			<div class="line islogin"></div>
-		</div>
-	<!--{if $login_user}-->
-		<ul id="myaccount-menu">${current_account(null)}</ul>
-	<!--{/if}-->
 	</div>
 </div>
 
