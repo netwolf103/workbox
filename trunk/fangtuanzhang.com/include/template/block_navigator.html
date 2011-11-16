@@ -13,14 +13,14 @@
 <li><a href="/vote/index.php">调研中心</a></li>
 <li>
 	<a href="/vote/index.php">价格筛选</a>
-      <ul class="subnav" style="width:70px;">
-        <li><a href="/team/Price_fl.php?Price=0" >4000元/㎡ 以下</a> </li>
+      <ul class="subnav" style="width:120px;">
+        <li><a href="/team/Price_fl.php?Price=0" >4000元/㎡以下</a> </li>
         <li><a href="/team/Price_fl.php?Price=1" >4000-5000元/㎡ </a> </li>
         <li><a href="/team/Price_fl.php?Price=2" >5000-6000元/㎡ </a> </li>
 		<li><a href="/team/Price_fl.php?Price=3" >6000-7000元/㎡ </a> </li>
 		<li><a href="/team/Price_fl.php?Price=4" >7000-8000元/㎡ </a></li>
 		<li><a href="/team/Price_fl.php?Price=6" >9000-10000元/㎡ </a></li>
-		<li><a href="/team/Price_fl.php?Price=7" >10000元/㎡ 以上</a></li>
+		<li><a href="/team/Price_fl.php?Price=7" >10000元/㎡以上</a></li>
 		<li><a href="/team/Price_fl.php" >全部</a></li>
       </ul>
 </li>
@@ -57,10 +57,26 @@
 	<a href="/fangtuanzhang/index.php?gid=10">经开</a>
 	</li>
 	<li>
-	<a href="/fangtuanzhang/index.php?gid=11">新区</a>
+	<a href="/index.php?gid=11">大兴新区</span></a>
 	</li>
 	<li>
-	<a href="/fangtuanzhang/index.php?gid=12">新区</a>
+	<a href="/index.php?gid=12">西咸新区</span></a>
 	</li>
+	</ul>
+</li>
+
+<li style="position:absolute;right:50px;">
+	<a href="/account/login.php">团员登录</a>
+	<ul class="links">
+	<!--{if $login_user}-->
+		<li class="username">欢迎您，${mb_strimwidth($login_user['username'],0,10)}！</li>
+		<li class="account"><a href="/order/index.php" id="myaccount" class="account">我的{$INI['system']['abbreviation']}</a></li>
+		<li class="logout"><a href="/account/logout.php">退出</a></li>
+	<!--{else}-->
+		<li class="login"><a href="/account/login.php">登录</a></li>
+		<li class="signup"><a href="/account/signup.php">注册</a></li>
+	<!--{/if}-->
+		<li class="signup"><a href="/subscribe.php">邮件订阅</a></li>
+		<li class="signup"><a class="sms" onclick="X.miscajax('sms','subscribe');">短信订阅</a></li>
 	</ul>
 </li>
