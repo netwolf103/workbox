@@ -52,9 +52,9 @@
 						<!--{if $team['logo']}--><span class="hint">${team_image($team['logo'])}</span><!--{/if}-->
 					</div>
 					<div class="field">
-						<label>市场价</label>
+						<label>原均价(元/㎡)</label>
 						<input type="text" size="10" name="market_price" id="team-create-market-price" class="number" value="${moneyit($team['market_price'])}" datatype="money" require="true" />
-						<label>网站价</label>
+						<label>现起价(元/㎡)</label>
 						<input type="text" size="10" name="team_price" id="team-create-team-price" class="number" value="${moneyit($team['team_price'])}" datatype="double" require="true" />
 						<label>虚拟购买</label>
 						<input type="text" size="10" name="pre_number" id="team-create-pre_number" class="number" value="${moneyit($team['pre_number'])}" datatype="number" require="true" />
