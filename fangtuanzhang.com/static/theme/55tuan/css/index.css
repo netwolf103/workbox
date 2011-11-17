@@ -113,12 +113,17 @@ body.newbie{background-position:50% 326px;}
 #menu li.sfhover ul { display:block;}
 
 #menu li ul.subnav {
-	width:150px;
+	width:941px;
+	position:absolute;
+	left:8px;
 }
 
-#menu li ul.subnav li, #menu li ul.subnav li a {
-	width:100%;
-	clear:both;
+#menu li ul.w60 li, #menu li ul.w60 li a {
+	width:60px;
+}
+
+#menu li ul.w100 li, #menu li ul.w100 li a {
+	width:100px;
 }
 
 
