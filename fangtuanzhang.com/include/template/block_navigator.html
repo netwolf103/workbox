@@ -13,7 +13,7 @@
 <li><a href="/vote/index.php">调研中心</a></li>
 <li>
 	<a href="/vote/index.php">价格筛选</a>
-      <ul class="subnav" style="width:120px;">
+      <ul class="subnav w100">
         <li><a href="/team/Price_fl.php?Price=0" >4000元/㎡以下</a> </li>
         <li><a href="/team/Price_fl.php?Price=1" >4000-5000元/㎡ </a> </li>
         <li><a href="/team/Price_fl.php?Price=2" >5000-6000元/㎡ </a> </li>
@@ -26,7 +26,7 @@
 </li>
 <li>
 	<a href="/vote/index.php">区域筛选</a>
-	<ul class="subnav" style="width:60px;">
+	<ul class="subnav w60">
 	<li class="all"><a class="cur" href="/fangtuanzhang/">全部</a></li>
 
 	<li>
@@ -67,16 +67,16 @@
 
 <li style="position:absolute;right:50px;">
 	<a href="/account/login.php">团员登录</a>
-	<ul class="links">
+	<ul class="links" style="width:350px;position:absolute;right:0;">
 	<!--{if $login_user}-->
 		<li class="username">欢迎您，${mb_strimwidth($login_user['username'],0,10)}！</li>
 		<li class="account"><a href="/order/index.php" id="myaccount" class="account">我的{$INI['system']['abbreviation']}</a></li>
 		<li class="logout"><a href="/account/logout.php">退出</a></li>
 	<!--{else}-->
-		<li class="login"><a href="/account/login.php">登录</a></li>
-		<li class="signup"><a href="/account/signup.php">注册</a></li>
+		<li><a href="/account/login.php">登录</a></li>
+		<li><a href="/account/signup.php">注册</a></li>
 	<!--{/if}-->
-		<li class="signup"><a href="/subscribe.php">邮件订阅</a></li>
-		<li class="signup"><a class="sms" onclick="X.miscajax('sms','subscribe');">短信订阅</a></li>
+		<li><a href="/subscribe.php">邮件订阅</a></li>
+		<li><a class="sms" onclick="X.miscajax('sms','subscribe');">短信订阅</a></li>
 	</ul>
 </li>
