@@ -20,7 +20,7 @@
   <tr>
     <td width="80"><!--{if $team['close_time']==0}--><a class="deal-today-link" href="/team.php?id={$team['id']}">项目名称：</a><!--{/if}--> </td>
     <td width="*"><!--{if $team['logo']}--><img src="${team_image($team['logo'])}" alt="{$team['title']}" style="vertical-align:middle;" /><!--{else}-->{$team['title']}<!--{/if}--></td>
-    <td width="120"><button>观看项目宣传片</button></td>
+    <td width="120"><!--{if $team['flv']}--><a href="#block_side_flv" id="play_button"><button>观看项目宣传片</button></a><!--{/if}--></td>
   </tr>
 </table>
 
@@ -135,7 +135,7 @@
                           </td>
   </tr>
   <tr>
-    <td >  <!--{include block_side_flv}--></td>
+    <td ><a name="block_side_flv"></a>  <!--{include block_side_flv}--></td>
   </tr>
 </table>
 
