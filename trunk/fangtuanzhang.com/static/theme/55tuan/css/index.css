@@ -118,6 +118,12 @@ body.newbie{background-position:50% 326px;}
 	left:8px;
 }
 
+#menu li ul.subnav li, #menu li ul.subnav li a {
+	float:none;
+	display:inline;
+	padding:5px 3px;
+}
+
 #menu li ul.w60 li, #menu li ul.w60 li a {
 	width:60px;
 }
@@ -232,7 +238,28 @@ dd#bd{position:relative;z-index:1;width:960px;margin:0 auto;padding:30px 0 65px;
 #content .secondary h1 span a{color:#e56b07;}
 #content .secondary h1 a { font-size:14px;color: #000000; }
 #content .secondary h1 a:hover { color: #339999; }
-#content .secondary .deal-buy { position: relative; }
+#content .secondary .deal-buy { position: relative; background:url("i/deal-buy-bg.png") repeat-x 0 0;height:49px; padding:5px 10px; }
+.now_price {
+	color:#ff8000;
+	font-size:18px;
+}
+
+.now_price del {
+	font-size:11px;
+}
+
+.button-buy {
+	display:block;
+	width:56px;
+	height:26px;
+	line-height:26px;
+	text-align:center;
+	background:url("i/button-deal-buy.png") no-repeat 0 0;
+	color:#000;
+	position:absolute;
+	right:10px;
+	top:15px;
+}
 #content .secondary .deal-price-tag-open { background: url("i/bg-deal-see-s.png?v=1") no-repeat scroll 0 0 transparent; height: 76px; left: -10px; padding-left: 50px; position: absolute; width: 168px; z-index: 1; }
 #content .secondary .deal-price-tag-soldout { background: url("i/bg-deal-soldout-s.png?v=1") no-repeat scroll 0 0 transparent; height: 76px; left: -27px; padding-left: 50px; position: absolute; width: 168px; z-index: 1; }
 #content .secondary .deal-price { height: 64px; left: -24px; line-height: 64px; padding-left: 35px; position: absolute; width: 100px; z-index: 2; }
