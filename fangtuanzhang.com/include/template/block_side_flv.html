@@ -20,5 +20,14 @@ window.x_init_hook_player = function() {
 	fo.addParam("quality","high");
 	fo.write("team_{$team['id']}_player");
 }
+
+var player;
+function playerReady(obj) {
+	player = document.getElementById(obj['id']);
+}
+
+document.getElementById('play_button').onclick = function(){
+	player.sendEvent('play', true);
+}
 </script>
 <!--{/if}-->
