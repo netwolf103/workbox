@@ -76,27 +76,10 @@
 </div>
 <div class="inner">
 						<div class="deal-buy">
-							<div class="deal-price-tag-open"></div>
-							<div class="deal-price-tag"></div>
-							<p class="deal-price"><strong>{$currency}${moneyit($team['team_price'])}</strong><span><a href="/team.php?id={$team['id']}" rel="nofollow"></a></span> </p>
+							<p class="now_price"><del>原均价 {$currency}${moneyit($team['market_price'])} 元/㎡</del></p>
+							<p class="now_price"><strong>{$currency}${moneyit($team['team_price'])} 元/㎡</strong></p>
+							<a href="/team.php?id={$team['id']}" rel="nofollow" class="button-buy">参团</a>
 						</div>
-						<table class="discount"><tbody>
-							
-								<th style="font-size:11px">原均价</th>
-								<td ><del><strong>{$currency}${moneyit($team['market_price'])}</strong></del></td>
-							</tr>
-							
-                            <tr>
-								<th style="font-size:11px">现起价</th>
-								<td class="price"><strong>{$currency}${moneyit($team['team_price'])}</strong></td>
-
-							<tr>
-                            </tr>
-                            	<tr height="10">
-								<th>&nbsp;</th>
-								<td>&nbsp;</td>
-							</tr>
-						</tbody></table>
 						<!--div  id="deal-timeleft{$tindex}" curtime="{$now}000" diff="{$detail[$team['id']]['diff_time']}000" class="item-time">
 							<ul id="counter{$tindex}">
 							<!--{if $detail[$team['id']]['left_day']>0}-->
