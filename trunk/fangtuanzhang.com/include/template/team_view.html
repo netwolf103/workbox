@@ -160,7 +160,54 @@
                 
                 </div>
             </div>
+
+			<div class="box-content cf" style="border-top:0;">
+				 <div class="main" id="team_main_side">
+					<h2 id="detail">楼盘详情</h2>
+					<!--{if $details}-->
+					<table width="650" border="1" cellspacing="0" cellpadding="0" class="details-list">
+						<tr>
+							<th>均价：</th><td>{$details['price']}</td>
+							<th>售楼电话：</th><td>{$details['telephone']}</td>
+							<th>入住时间：</th><td>{$details['checkin']}</td>
+						</tr>
+						<tr>
+							<th>物业类别：</th><td>{$details['wylb']}</td>
+							<th>环线位置：</th><td>{$details['hxwz']}</td>
+							<th>建筑类别：</th><td>{$details['build_type']}</td>
+						</tr>
+						<tr>
+							<th>物业地址：</th><td>{$details['wydz']}</td>
+							<th>开盘时间：</th><td>{$details['kpsj']}</td>
+							<th>交通状况：</th><td>{$details['traffic']}</td>
+						</tr>
+						<tr>
+							<th>容积率：</th><td>{$details['rjl']}</td>
+							<th>物业费：</th><td>{$details['wyf']}</td>
+							<th>标准层面积：</th><td>{$details['bzcmj']}</td>
+						</tr>
+						<tr>
+							<th>开发商：</th><td>{$details['developers']}</td>
+							<th>项目特色：</th><td>{$details['xmts']}</td>
+							<th>售楼地址：</th><td>{$details['sldz']}</td>
+						</tr>
+						<tr>
+							<th>装修状况：</th><td>{$details['decoration']}</td>
+							<th>所属商圈：</th><td>{$details['business_circle']}</td>
+							<th>主力户型：</th><td>{$details['zlhx']}</td>
+						</tr>
+						<tr>
+							<th>绿化率：</th><td>{$details['greenrate']}</td>
+							<th>物业公司：</th><td>{$details['wygs']}</td>
+							<th>预售许可证：</th><td>{$details['ysxkz']}</td>
+						</tr>
+					</table>
+					<!--{/if}-->
+
+				</div>
+			</div>
     </div>
+
     <div id="sidebar">
 		<!--{include block_side_invite}-->
 		<!--{include block_side_bulletin}-->
