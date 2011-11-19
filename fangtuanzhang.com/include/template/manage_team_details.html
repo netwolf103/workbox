@@ -1,0 +1,127 @@
+<!--{include manage_header}-->
+
+<div id="bdw" class="bdw">
+<div id="bd" class="cf">
+<div id="leader">
+	<div class="dashboard" id="dashboard">
+		<ul>${mcurrent_team('team')}</ul>
+	</div>
+	<div id="content" class="clear mainwide">
+        <div class="clear box">
+            <div class="box-top"></div>
+            <div class="box-content">
+                <div class="head">
+					<h2>编辑楼盘详情</h2>
+					<ul class="filter">${current_manageteam('details', $id)}</ul>
+				<!--{/if}-->
+				</div>
+                <div class="sect">
+					<div class="wholetip clear"><h3>1、楼盘信息</h3></div>
+					<form method="post" action="/manage/team/details.php?id={$id}" enctype="multipart/form-data" class="validator">
+
+						<div class="field">
+							<label>均价(元/㎡)</label>
+							<input type="text" size="30" name="price" id="details-price" class="f-input " value="{$details['price']}" />
+						</div>
+						<div class="field">
+							<label>售楼电话</label>
+							<input type="text" size="30" name="telephone" id="details-telephone" class="f-input " value="{$details['telephone']}" />
+						</div>
+						<div class="field">
+							<label>入住时间</label>
+							<input type="text" size="30" name="checkin" id="details-checkin" class="f-input " value="{$details['checkin']}" />
+						</div>
+
+						<div class="field">
+							<label>物业类别</label>
+							<input type="text" size="30" name="wylb" id="details-wylb" class="f-input" value="{$details['wylb']}"/>
+						</div>
+						<div class="field">
+							<label>环线位置</label>
+							<input type="text" size="30" name="hxwz" id="details-hxwz" class="f-input" value="{$details['hxwz']}" />
+						</div>
+						<div class="field">
+							<label>建筑类别</label>
+							<input type="text" size="30" name="build_type" id="details-build-type" class="f-input" value="{$details['build_type']}" />
+						</div>
+
+						<div class="field">
+							<label>物业地址</label>
+							<input type="text" size="30" name="wydz" id="details-wydz" class="f-input" value="{$details['wydz']}" />
+						</div>
+						<div class="field">
+							<label>开盘时间</label>
+							<input type="text" size="30" name="kpsj" id="details-kpsj" class="f-input" value="{$details['kpsj']}" />
+						</div>
+						<div class="field">
+							<label>交通状况</label>
+							<input type="text" size="30" name="traffic" id="details-traffic" class="f-input" value="{$details['traffic']}" />
+						</div>
+
+						<div class="field">
+							<label>容积率</label>
+							<input type="text" size="30" name="rjl" id="details-rjl" class="f-input" value="{$details['rjl']}" />
+						</div>
+						<div class="field">
+							<label>物业费</label>
+							<input type="text" size="30" name="wyf" id="details-wyf" class="f-input" value="{$details['wyf']}" />
+						</div>
+						<div class="field">
+							<label>标准层面积</label>
+							<input type="text" size="30" name="bzcmj" id="details-bzcmj" class="f-input" value="{$details['bzcmj']}" />
+						</div>
+
+						<div class="field">
+							<label>开发商</label>
+							<input type="text" size="30" name="developers" id="details-developers" class="f-input" value="{$details['developers']}" />
+						</div>
+						<div class="field">
+							<label>项目特色</label>
+							<input type="text" size="30" name="xmts" id="details-xmts" class="f-input" value="{$details['xmts']}" />
+						</div>
+						<div class="field">
+							<label>售楼地址</label>
+							<input type="text" size="30" name="sldz" id="details-sldz" class="f-input" value="{$details['sldz']}" />
+						</div>
+
+						<div class="field">
+							<label>装修状况</label>
+							<input type="text" size="30" name="decoration" id="details-decoration" class="f-input" value="{$details['decoration']}" />
+						</div>
+						<div class="field">
+							<label>所属商圈</label>
+							<input type="text" size="30" name="business_circle" id="details-business_circle" class="f-input" value="{$details['business_circle']}" />
+						</div>
+						<div class="field">
+							<label>主力户型</label>
+							<input type="text" size="30" name="zlhx" id="details-zlhx" class="f-input" value="{$details['zlhx']}" />
+						</div>
+
+						<div class="field">
+							<label>绿化率</label>
+							<input type="text" size="30" name="greenrate" id="details-greenrate" class="f-input" value="{$details['greenrate']}" />
+						</div>
+						<div class="field">
+							<label>物业公司</label>
+							<input type="text" size="30" name="wygs" id="details-wygs" class="f-input" value="{$details['wygs']}" />
+						</div>
+						<div class="field">
+							<label>预售许可证</label>
+							<input type="text" size="30" name="ysxkz" id="details-ysxkz" class="f-input" value="{$details['ysxkz']}" />
+						</div>
+
+						<input type="submit" value="提 交" name="commit" id="leader-submit" class="formbutton" style="margin-left:120px;"/>
+					</form>
+                </div>
+            </div>
+            <div class="box-bottom"></div>
+        </div>
+	</div>
+<div id="sidebar">
+</div>
+
+</div>
+</div> <!-- bd end -->
+</div> <!-- bdw end -->
+
+<!--{include manage_footer}-->
