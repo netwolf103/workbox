@@ -39,6 +39,8 @@
 			
 			<br class="clear" />
 
+			<?php //comments_template( '', true ); ?>
+
 		</div>
 
 	</div>
