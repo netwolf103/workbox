@@ -11,26 +11,26 @@
 	<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.ico" />
 	
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/javascript/css/lightbox.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/javascript/css/lightbox.css" type="text/css" media="screen" />
 	<!--[if IE 6]>
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style-ie6.css" type="text/css" media="screen" />
 	<![endif]-->
 
-	<script type='text/javascript' src='<?php bloginfo('template_url') ?>/javascript/jquery.min.js'></script>
+	<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/javascript/jquery.min.js'></script>
 	<?php if( is_home() ): ?>
-	<script type='text/javascript' src='<?php bloginfo('template_url') ?>/javascript/jquery.easing.1.3.js'></script>
-	<script type='text/javascript' src='<?php bloginfo('template_url') ?>/javascript/jquery.vgrid.0.1.4-mod.js'></script>
+	<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/javascript/jquery.easing.1.3.js'></script>
+	<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/javascript/jquery.vgrid.0.1.4-mod.js'></script>
 	<?php endif; ?>
-	<script type='text/javascript' src='<?php bloginfo('template_url') ?>/javascript/jquery.lightbox.js'></script>
-	<script type='text/javascript' src='<?php bloginfo('template_url') ?>/javascript/init.js'></script>
+	<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/javascript/jquery.lightbox.js'></script>
+	<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/javascript/init.js'></script>
 
 	<script type="text/javascript">
 	(function($){
 
 		$(document).ready(function(){
 			$("div.featured > .lightbox").lightbox({
-				fileLoadingImage: "<?php bloginfo('template_url') ?>/javascript/images/loading.gif",
-				fileBottomNavCloseImage: "<?php bloginfo('template_url') ?>/javascript/images/closelabel.gif",
+				fileLoadingImage: "<?php echo get_template_directory_uri(); ?>/javascript/images/loading.gif",
+				fileBottomNavCloseImage: "<?php echo get_template_directory_uri(); ?>/javascript/images/closelabel.gif",
 			});
 		});
 
@@ -47,7 +47,7 @@
 <div id="wrapper">
 
 	<div id="header">
-		<h1 id="logo"><a href="<?php bloginfo('home') ?>" title="<?php bloginfo('name'); ?>"><img src="<?php ice_logo(); ?>" alt="<?php bloginfo('name'); ?>"><a/></h1>
+		<h1 id="logo"><a href="<?php bloginfo('url') ?>" title="<?php bloginfo('name'); ?>"><img src="<?php ice_logo(); ?>" alt="<?php bloginfo('name'); ?>"><a/></h1>
 		
 		<?php wp_nav_menu(array('theme_location' => 'main_menu', 'container_class' => 'main-navigation')); ?>
 	</div>

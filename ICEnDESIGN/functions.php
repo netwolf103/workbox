@@ -8,7 +8,7 @@ if( is_admin() )
 
 	function ice_admin_head()
 	{
-		echo '<link rel="stylesheet" href="'.get_bloginfo('template_url').'/ice-admin/style.css" type="text/css" media="screen" />';
+		echo '<link rel="stylesheet" href="'.get_template_directory_uri().'/ice-admin/style.css" type="text/css" media="screen" />';
 	}
 
 	function ice_admin_menu()
