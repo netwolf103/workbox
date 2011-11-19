@@ -1,6 +1,6 @@
 <li><a href="../">首 页</a></li>
 <li><a href="../">项目推广</a>
-      <ul>
+      <ul class="subnav w100" style="width:240px;">
         <li><a href="#">项目规划</a></li>
         <li><a href="#">宣传片</a></li>
         <li><a href="#">实景照</a></li>
@@ -13,7 +13,7 @@
 <li><a href="/vote/index.php">调研中心</a></li>
 <li>
 	<a href="/vote/index.php">价格筛选</a>
-      <ul class="subnav w100">
+      <ul class="subnav w100" style="width:800px;">
         <li><a href="/team/Price_fl.php?Price=0" >4000元/㎡以下</a> </li>
         <li><a href="/team/Price_fl.php?Price=1" >4000-5000元/㎡ </a> </li>
         <li><a href="/team/Price_fl.php?Price=2" >5000-6000元/㎡ </a> </li>
@@ -26,9 +26,7 @@
 </li>
 <li>
 	<a href="/vote/index.php">区域筛选</a>
-	<ul class="subnav w60">
-	<li class="all"><a class="cur" href="/fangtuanzhang/">全部</a></li>
-
+	<ul class="subnav w60" style="width:640px;">
 	<li>
 	<a href="/fangtuanzhang/index.php?gid=2">城东</a>
 	</li>
@@ -62,12 +60,13 @@
 	<li>
 	<a href="/index.php?gid=12">西咸新区</span></a>
 	</li>
+	<li class="all"><a class="cur" href="/fangtuanzhang/">全部</a></li>
 	</ul>
 </li>
 
 <li style="position:absolute;right:50px;">
 	<a href="/account/login.php">团员登录</a>
-	<ul class="subnav" style="position:absolute;left:0;">
+	<ul class="subnav" style="position:absolute;left:-133px;width:250px;">
 	<!--{if $login_user}-->
 		<li class="username">欢迎您，${mb_strimwidth($login_user['username'],0,10)}！</li>
 		<li class="account"><a href="/order/index.php" id="myaccount" class="account">我的{$INI['system']['abbreviation']}</a></li>
