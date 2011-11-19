@@ -47,6 +47,8 @@
                           
                         </tr>
                     </table>
+
+					<div style="display:none;">
 					<!--{if $team['close_time']}-->
                     <div class="deal-box deal-timeleft deal-off" id="deal-timeleft" curtime="{$now}000" diff="{$diff_time}000">
 						<h3>本团购结束于</h3>
@@ -64,6 +66,7 @@
 						</ul></div>
 					</div>
 					<!--{/if}-->
+					</div>
 
 				<!--{if $team['close_time']==0}-->
 					<!--{if $team['state']=='none'}-->
