@@ -75,6 +75,9 @@ $huxing_list = DB::LimitQuery('huxing', array(
 	'condition' => $condition,
 ));
 
+// 楼盘详情
+$details = Table::Fetch('details', $id, 'team_id');
+
 /*seo*/
 $seo_title = $team['seo_title'];
 $seo_keyword = $team['seo_keyword'];
