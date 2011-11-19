@@ -1,4 +1,7 @@
 <?php
+if ( ! isset( $content_width ) )
+	$content_width = 640;
+
 require_once( dirname(__FILE__) . '/ice-includes/ice-loader.php' );
 
 if( is_admin() )
