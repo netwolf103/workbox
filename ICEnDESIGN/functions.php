@@ -2,33 +2,6 @@
 if ( ! isset( $content_width ) )
 	$content_width = 640;
 
-if ( ! function_exists( 'ice_setup' ) )
-{
-	function ice_setup() {
-
-		// This theme uses post thumbnails
-		add_theme_support( 'post-thumbnails' );
-		set_post_thumbnail_size(175, 108, true);
-
-		add_image_size('featured-thumbnails', 226, 151, true);
-		add_image_size('single-thumbnails', 706, 435, true);
-		add_image_size('grid-thumbnails', 331, 331, true);
-
-		load_theme_textdomain( 'ice', TEMPLATEPATH . '/languages' );
-
-		$locale = get_locale();
-		$locale_file = TEMPLATEPATH . "/languages/$locale.php";
-		if ( is_readable( $locale_file ) )
-			require_once( $locale_file );
-
-		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'main_menu'		=> __( 'Main Navigation', 'icen-design' ),
-			'footer_menu'	=> __( 'Footer Navigation', 'icen-design' ),
-		) );
-	}
-}
-
 require_once( dirname(__FILE__) . '/ice-includes/ice-loader.php' );
 
 if( is_admin() )
