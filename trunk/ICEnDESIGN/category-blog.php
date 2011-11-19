@@ -17,6 +17,8 @@
 						<?php the_post_thumbnail('single-thumbnails'); ?>
 
 						<?php the_excerpt(); ?>
+
+						<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'twentyten' ), 'after' => '</div>' ) ); ?>
 					</div>
 				</div>
 
