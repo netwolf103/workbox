@@ -39,7 +39,7 @@
 			
 			<br class="clear" />
 
-			<?php //comments_template( '', true ); ?>
+			<?php comments_template( '', true ); ?>
 
 		</div>
 
