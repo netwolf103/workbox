@@ -17,6 +17,9 @@
 	<![endif]-->
 
 	<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/javascript/jquery.min.js'></script>
+
+	<?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
+
 	<?php if( is_home() ): ?>
 	<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/javascript/jquery.easing.1.3.js'></script>
 	<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/javascript/jquery.vgrid.0.1.4-mod.js'></script>
