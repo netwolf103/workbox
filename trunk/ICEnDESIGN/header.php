@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/javascript/css/lightbox.css" type="text/css" media="screen" />
 	<!--[if IE 6]>
-	<link rel="stylesheet" href="<?phpecho get_template_directory_uri(); ?>/style-ie6.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style-ie6.css" type="text/css" media="screen" />
 	<![endif]-->
 
 	<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/javascript/jquery.min.js'></script>
