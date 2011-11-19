@@ -8,12 +8,12 @@
 	
 	<!-- meta tags -->
 	<meta name="description" content="<?php bloginfo('description'); ?>" />
-	<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.ico" />
+	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico" />
 	
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/javascript/css/lightbox.css" type="text/css" media="screen" />
 	<!--[if IE 6]>
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style-ie6.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="<?phpecho get_template_directory_uri(); ?>/style-ie6.css" type="text/css" media="screen" />
 	<![endif]-->
 
 	<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/javascript/jquery.min.js'></script>
@@ -47,7 +47,7 @@
 <div id="wrapper">
 
 	<div id="header">
-		<h1 id="logo"><a href="<?php bloginfo('url') ?>" title="<?php bloginfo('name'); ?>"><img src="<?php ice_logo(); ?>" alt="<?php bloginfo('name'); ?>"><a/></h1>
+		<h1 id="logo"><a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>"><img src="<?php ice_logo(); ?>" alt="<?php bloginfo('name'); ?>"><a/></h1>
 		
 		<?php wp_nav_menu(array('theme_location' => 'main_menu', 'container_class' => 'main-navigation')); ?>
 	</div>
