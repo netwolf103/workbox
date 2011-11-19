@@ -1,4 +1,4 @@
 <?php
-require_once( dirname(__FILE__) . '/functions.php' );
-require_once( dirname(__FILE__) . '/default-filters.php' );
+load_template(TEMPLATEPATH . '/ice-includes/functions.php');
+load_template(TEMPLATEPATH . '/ice-includes/default-filters.php');
 ?>
