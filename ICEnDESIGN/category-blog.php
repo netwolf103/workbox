@@ -11,6 +11,7 @@
 					<div class="post-meta">
 						Posted by <?php the_author(); ?>
 						at <?php the_date(); ?>
+						<p><?php the_tags(); ?></p>
 					</div>
 					
 					<div class="page-content">
