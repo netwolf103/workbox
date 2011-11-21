@@ -105,7 +105,7 @@ else if ( 'getverifycode1' == $action ) {
 				$verifycode = Utility::VerifyCode();
 
 				//发送验证码短信到手机
-				$content = $INI['system']['sitename']." 您的手机号：".$mobile." 验证码：".$verifycode." 一天内提交有效，感谢您的注册。";
+				$content = " 您的验证码为：".$verifycode." 一天内提交有效，感谢您的注册。[".$INI['system']['sitename']."]400-009-0517";
 				
 				$ret = sms_send($mobile, $content);
 				if($ret===true)
