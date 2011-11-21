@@ -66,7 +66,10 @@ if ( $order['state'] == 'pay' ) {
 	if ( is_get() ) {
 		$user = Table::Fetch('user', $login_user['id'], 'id');
 		if ($INI['sms']['buy']=='1' && Utility::IsMobile($user['mobile'])) {
-				$content = $INI['system']['sitename']." 团购项目：".$team['product']." 支付成功，感谢您的购买。";
+				$details = Table::Fetch('details', $team['id'], 'team_id');
+				$telephone = !empty($details['telephone']) ? $details['telephone'] : '400-009-0517';
+				$product = str_replace('•', ' - ', $team['product']);
+				$content = sprintf('您好：您参与团购(%s)的电子团购优惠券序列号为：%s ，购房时请出示此短信。优惠标准请联系商家。%s[%s]', $product, $order['pay_id'], $telephone, $INI['system']['sitename']);
 
 				$ret = sms_send($user['mobile'], $content);
 		}
