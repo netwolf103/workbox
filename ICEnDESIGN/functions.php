@@ -92,6 +92,8 @@ if( is_admin() )
 					<input type="image" border="0" alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif">
 					<img width="1" height="1" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" alt="">
 			</form>
+
+			<p><?php _e('Alipay:', 'ice'); ?> <a href="https://me.alipay.com/netwolf103"><img src="https://img.alipay.com/pa/img/home/logo-alipay-t.png" alt="<?php _e('Alipay:', 'ice'); ?>" /></a></p>
 		</div>
 	</div>
 </div>
