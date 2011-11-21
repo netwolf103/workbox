@@ -483,6 +483,14 @@ div.grid-item div.grid-image {
 	font-size:13px;
 }
 
+.single-content form, .page-content form {
+	margin-top:10px;
+}
+
+.single-content form input, .page-content form input {
+	margin-top:10px;
+}
+
 .featured {
 	margin:10px 0;
 }
