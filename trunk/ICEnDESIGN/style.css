@@ -523,22 +523,43 @@ div.grid-item div.grid-image {
 }
 
 .commentlist li {
+	
+	padding:8px 0 8px 1.5cm;
+}
+
+.reply {
 	border-bottom:1px dotted #C3C3C3;
-	padding:8px 0 8px 0.5cm;
+	padding-bottom:8px;
 }
 
 #respond {
+	font-size:13px;
+}
 
+#commentform {
+	padding-left:0.5cm;
 }
 
 #commentform p label {
 	display:inline-block;
-	width:80px;
 }
 
 #commentform p input {
-	height:18px;
-	line-height:18px;
+	height:20px;
+	line-height:20px;
+	width:300px;
+	
+}
+
+#commentform p input, #commentform p textarea {
+	display:block;
+	margin:5px 0;
+}
+
+#commentform p input#submit {
+	width:auto;
+	height:30px;
+	line-height:30px;
 }
 
 p.comment-notes {
