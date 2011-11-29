@@ -71,7 +71,7 @@ if ( ! function_exists( 'ice_logo' ) )
 	{
 		$sitelogo = ice_option_value('sitelogo');
 
-		if( file_exists( dirname(dirname(__FILE__)) . '/images/' . $sitelogo) ) {
+		if( !empty($sitelogo) && file_exists( dirname(dirname(__FILE__)) . '/images/' . $sitelogo) ) {
 			$sitelogo = get_template_directory_uri() .'/images/'. $sitelogo;
 		} else {
 			$sitelogo = get_template_directory_uri() . '/images/default-logo.png';
